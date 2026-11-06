@@ -1,0 +1,2366 @@
+<!DOCTYPE html><html lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style id="burgundy-theme">
+  body { background-color: #1E0710 !important; color: #FBEFF1 !important; }
+  .bg-white { background-color: #3A0E1C !important; }
+  .bg-red-50, .bg-red-50\/30, .hover\:bg-red-50:hover, .bg-\[\#fef2f2\], .bg-\[\#fff8e7\], .bg-gold-tint, .hover\:bg-gold-tint:hover { background-color: #4A1628 !important; }
+  .bg-\[\#faf9f6\] { background-color: #1E0710 !important; }
+  .bg-\[\#f0eded\], .bg-\[rgba\(240\,237\,237\,0\.6\)\], .bg-\[\#eae7e7\], .bg-surface-container\/30 { background-color: #33101F !important; }
+  .bg-gradient-to-r { background-image: linear-gradient(90deg, #12040A 0%, #4A1628 50%, #2A0B15 100%) !important; }
+  .text-\[\#1a1a1a\] { color: #FBEFF1 !important; }
+  .text-\[\#525252\] { color: #D9B3BB !important; }
+  .text-\[\#c8102e\], .text-\[\#b22222\] { color: #E8B84A !important; }
+  .text-\[\#e5e0d8\] { color: #E8B84A !important; }
+  .border-\[\#e5e0d8\], .border-\[\#fee2e2\] { border-color: #6E2538 !important; }
+  .border-\[\#c8102e\] { border-color: #E8B84A !important; }
+  body, .bg-background-canvas, .bg-\[\#faf9f6\] { background: linear-gradient(160deg, #1E0710 0%, #5C1229 45%, #2A0B15 100%) !important; background-attachment: fixed !important; }
+  header, footer { background: linear-gradient(90deg, #2A0B15 0%, #6E0F26 50%, #2A0B15 100%) !important; }
+</style>
+<script src="https://cdn.tailwindcss.com/3.4.17?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"border-subtle":"#6E2538","border-strong":"#8A3350","tertiary-fixed-dim":"#ffb4ac","inverse-surface":"#313030","surface-variant":"#4A1628","background":"#1E0710","outline-variant":"#6E2538","surface-tint":"#E8B84A","on-secondary":"#ffffff","on-secondary-container":"#6c4d00","on-secondary-fixed":"#271900","background-canvas":"#1E0710","error":"#ba1a1a","surface-card":"#3A0E1C","surface-container-low":"#33101F","on-error":"#ffffff","on-error-container":"#93000a","inverse-on-surface":"#f3f0ef","on-tertiary-fixed-variant":"#92030f","on-primary-fixed-variant":"#92001c","tertiary-fixed":"#ffdad6","surface-container-lowest":"#2A0B15","surface-container-high":"#4A1628","outline":"#A55A70","text-muted":"#D9B3BB","on-primary-fixed":"#410007","on-tertiary-container":"#ffdad6","surface-container-highest":"#5A1D33","primary-fixed-dim":"#ffb3b1","secondary-container":"#ffbb16","on-background":"#FBEFF1","secondary-fixed":"#ffdea6","tertiary":"#9b0d14","primary-container":"#7A0F25","tertiary-container":"#be2b29","primary":"#E8B84A","secondary":"#D9485F","on-primary":"#2A0B15","secondary-fixed-dim":"#ffbb16","on-secondary-fixed-variant":"#5e4200","primary-fixed":"#ffdad8","surface":"#2A0B15","inverse-primary":"#ffb3b1","surface-container":"#3A0E1C","surface-dim":"#16050B","on-surface-variant":"#D9B3BB","on-surface":"#FBEFF1","error-container":"#ffdad6","on-tertiary":"#ffffff","crimson-deep":"#B22222","crimson-primary":"#C8102E","crimson-dark":"#8B0000","gold-warm":"#FDB913","gold-deep":"#E6A100","gold-tint":"#FFF8E7","charcoal-dark":"#FBEFF1","charcoal-muted":"#D9B3BB","on-tertiary-fixed":"#410003","on-primary-container":"#FBEFF1","surface-bright":"#3A1220","text-primary":"#FBEFF1"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter-mobile":"1rem","space-sm":"0.5rem","gutter":"1.5rem","space-xl":"2.5rem","margin":"2rem","margin-mobile":"1rem","space-xs":"0.25rem","space-lg":"1.5rem","space-md":"1rem"},"fontFamily":{"headline-lg-mobile":["\"Noto Sans\", sans-serif"],"body-md":["\"Inter\", sans-serif"],"display":["\"Noto Sans\", sans-serif"],"body-lg":["\"Inter\", sans-serif"],"headline-md":["\"Noto Sans\", sans-serif"],"label-sm":["\"Inter\", sans-serif"],"display-mobile":["\"Noto Sans\", sans-serif"],"body-sm":["\"Inter\", sans-serif"],"label-lg":["\"Inter\", sans-serif"],"headline-sm":["\"Noto Sans\", sans-serif"],"headline-lg":["\"Noto Sans\", sans-serif"],"label-md":["\"Inter\", sans-serif"]},"fontSize":{"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"0em","fontWeight":"700"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"display":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"headline-md":["22px",{"lineHeight":"28px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"500"}],"display-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-sm":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}]}}}};</script><style id="gradient-yellow-text">
+  .gradient-yellow-text { background-image: linear-gradient(90deg, #ffffff 0%, #f5f5f5 50%, #d9d9d9 100%) !important; background-clip: text; -webkit-background-clip: text; color: transparent !important; -webkit-text-fill-color: transparent !important; }
+  input, textarea, select, option { color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; }
+  #declaration-check { appearance: auto !important; -webkit-appearance: checkbox !important; accent-color: #6e0f26 !important; width: 24px !important; height: 24px !important; min-width: 24px !important; min-height: 24px !important; pointer-events: auto !important; cursor: pointer !important; }
+  #declaration-check:checked { accent-color: #6e0f26 !important; }
+  label:has(> #declaration-check) { cursor: pointer !important; }
+  input::placeholder, textarea::placeholder { color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; }
+  button, [role="button"], .step-nav-btn { background-color: #6e0f26 !important; border-color: #6e0f26 !important; color: #ffffff !important; }
+  ::selection { background: #6e0f26 !important; color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; }
+  button:focus-visible, a:focus-visible, input:focus, textarea:focus, select:focus { outline: 2px solid #6e0f26 !important; outline-offset: 2px; border-color: #6e0f26 !important; box-shadow: 0 0 0 3px rgba(110, 15, 38, 0.35) !important; }
+  button:active, a:active, option:checked, [role="option"][aria-selected="true"] { background-color: #6e0f26 !important; }
+  option:checked, [role="option"][aria-selected="true"] { color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; }
+  input[type="radio"][name="gender"] { -webkit-appearance: none !important; appearance: none !important; width: 20px !important; height: 20px !important; min-width: 20px; border-radius: 50% !important; border: 2px solid #1e3a8a !important; background: #ffffff !important; cursor: pointer !important; margin: 0 !important; display: inline-block; flex-shrink: 0; }
+  input[type="radio"][name="gender"]:checked { border-color: #0a1f5c !important; background: radial-gradient(circle, #ffffff 0 3px, transparent 3.5px), linear-gradient(135deg, #0a1f5c 0%, #1e3a8a 55%, #1d4ed8 100%) !important; }
+  label:has(> input[type="radio"][name="gender"]) { border-color: transparent !important; background: transparent !important; box-shadow: none !important; }
+  .step-nav-btn, .step-nav-btn:hover, .step-nav-btn:focus, .step-nav-btn:focus-visible, .step-nav-btn:active { background: transparent !important; background-color: transparent !important; border: 0 !important; outline: none !important; box-shadow: none !important; }
+  input, select, textarea { color: #FBEFF1 !important; -webkit-text-fill-color: #FBEFF1 !important; opacity: 1 !important; caret-color: #FBEFF1; }
+  input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus { -webkit-text-fill-color: #FBEFF1 !important; -webkit-box-shadow: 0 0 0 1000px #3A0E1C inset !important; box-shadow: 0 0 0 1000px #3A0E1C inset !important; caret-color: #FBEFF1; }
+  .bg-gold-tint\/70 { background-color: #4A1628 !important; }
+  html body input, html body select, html body textarea, html body input:focus, html body input:active, html body input:focus-visible, html body input:not(:placeholder-shown), html body input:valid, html body input:invalid, html body select:focus, html body textarea:focus, html body select option, html body input[type="date"], html body input[type="tel"], html body input[type="email"], html body input[type="number"] { color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; caret-color: #ffffff !important; opacity: 1 !important; color-scheme: dark; }
+  html body input:-webkit-autofill, html body input:-webkit-autofill:focus, html body input:-webkit-autofill:hover { -webkit-text-fill-color: #ffffff !important; caret-color: #ffffff; }
+  #header-title, #header-title .gradient-yellow-text, a[data-path="home"], a[data-path="home"] .gradient-yellow-text, a[data-path="home"] span { background: none !important; background-image: none !important; color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; }
+  #site-nav-bar a[data-path], #site-nav-bar button { background-color: #6e0f26 !important; border: 1px solid #6e0f26 !important; border-radius: 0.375rem !important; }
+  #site-nav-bar a[data-path], #site-nav-bar button, #site-nav-bar a[data-path] *, #site-nav-bar button * { background: none !important; background-image: none !important; color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; }
+  #site-nav-bar a[data-path], #site-nav-bar button { background-color: #6e0f26 !important; }
+  #lang-toggle button { background: transparent !important; background-color: transparent !important; border: 0 !important; box-shadow: none !important; padding: 0 2px; cursor: pointer; }
+  #lang-toggle button[aria-pressed="true"] { color: #E8B84A !important; -webkit-text-fill-color: #E8B84A !important; }
+  #lang-toggle button[aria-pressed="false"] { color: #D9B3BB !important; -webkit-text-fill-color: #D9B3BB !important; }
+  #lang-toggle .gradient-yellow-text { background: none !important; background-image: none !important; color: inherit !important; -webkit-text-fill-color: currentColor !important; }
+  #lang-track { background-color: #3A0E1C !important; }
+</style><script>
+/**
+ * YOUPI PG V2 — Universal One-Script Integration SDK
+ *
+ * Official Distributable Browser Script (youpi.js / youpi-checkout.js)
+ * Provides zero-JavaScript button configuration [data-youpi-pay] and programmatic Youpi.pay({...})
+ * Launches the responsive iframe checkout modal with background blur.
+ * Emits normalized browser payment events and manages checkout modal lifecycle.
+ *
+ * IMPORTANT SECURITY NOTE:
+ * Browser events and client-side callbacks are strictly for UI and user experience.
+ * Browser callbacks are not proof of settlement. For manual UPI, only the merchant's
+ * independent bank-account review may approve payment.
+ */
+
+(function (globalScope) {
+  'use strict';
+
+  // Prevent multiple initializations
+  if (globalScope.__YOUPI_SDK_INITIALIZED__) {
+    return;
+  }
+  globalScope.__YOUPI_SDK_INITIALIZED__ = true;
+
+  const isBrowser = typeof window !== 'undefined' && typeof document !== 'undefined';
+
+  function sanitizeModalUrl(url) {
+    try {
+      const parsed = new URL(url, window.location.href);
+      if (parsed.protocol === 'http:' || parsed.protocol === 'https:') {
+        return parsed.href;
+      }
+    } catch {}
+    return 'about:blank';
+  }
+
+  /**
+   * Helper: extract configuration from the <script> tag loading this file.
+   */
+  function getScriptConfig() {
+    if (!isBrowser) return {};
+
+    const script = document.currentScript ||
+      document.querySelector('script[src*="youpi.js"], script[src*="youpi-checkout.js"]');
+
+    if (!script) return {};
+
+    let scriptUrl = '';
+    try {
+      scriptUrl = new URL(script.src, window.location.href);
+    } catch (e) { }
+
+    const origin = scriptUrl ? scriptUrl.origin : (window.location.protocol + '//' + window.location.hostname + ':7000');
+
+    return {
+      // Merchant identifiers are public. Secret API credentials belong only on merchant servers.
+      merchantId: script.getAttribute('data-merchant-id') || '',
+      apiUrl: script.getAttribute('data-api-url') || origin,
+      portalUrl: script.getAttribute('data-portal-url') || script.getAttribute('data-checkout-url') || origin,
+      currency: script.getAttribute('data-currency') || 'INR',
+      name: script.getAttribute('data-name') || 'Merchant Store',
+      themeColor: script.getAttribute('data-theme-color') || '#0b63e5',
+      successUrl: script.getAttribute('data-success-url') || '',
+      failedUrl: script.getAttribute('data-failed-url') || '',
+      suspiciousUrl: script.getAttribute('data-suspicious-url') || '',
+      expiredUrl: script.getAttribute('data-expired-url') || '',
+      cancelledUrl: script.getAttribute('data-cancelled-url') || ''
+    };
+  }
+
+  const scriptConfig = getScriptConfig();
+
+  /**
+   * YoupiCheckout class
+   */
+  class YoupiCheckout {
+    /**
+     * @param {{
+     *   order_id?: string,
+     *   orderId?: string,
+     *   amount?: number | string,
+     *   currency?: string,
+     *   name?: string,
+     *   description?: string,
+     *   customer?: { name?: string, email?: string, phone?: string },
+     *   metadata?: Record<string, any>,
+     *   paymentId?: string,
+     *   checkoutUrl?: string,
+     *   portalUrl?: string,
+     *   apiUrl?: string,
+     *   theme?: { color?: string },
+     *   handler?: (result: any) => void,
+     *   onSuccess?: (result: any) => void,
+     *   onFailed?: (result: any) => void,
+     *   onPaymentFailed?: (result: any) => void,
+     *   onSuspicious?: (result: any) => void,
+     *   onExpired?: (result: any) => void,
+     *   onCancelled?: (result: any) => void,
+     *   onClose?: () => void,
+     *   successUrl?: string,
+     *   failedUrl?: string,
+     *   suspiciousUrl?: string,
+     *   expiredUrl?: string,
+     *   cancelledUrl?: string
+     * }} options
+     */
+    constructor(options = {}) {
+      const defaultPortal = isBrowser
+        ? (scriptConfig.portalUrl || window.location.origin)
+        : 'http://localhost:7000';
+
+      const defaultApi = isBrowser
+        ? (scriptConfig.apiUrl || defaultPortal)
+        : 'http://localhost:6100';
+
+      this.options = Object.assign({
+        order_id: '',
+        orderId: '',
+        amount: 0,
+        currency: scriptConfig.currency || 'INR',
+        name: scriptConfig.name || 'Merchant Store',
+        description: 'Order Payment',
+        customer: {},
+        metadata: {},
+        paymentId: '',
+        checkoutUrl: '',
+        portalUrl: defaultPortal,
+        apiUrl: defaultApi,
+        theme: { color: scriptConfig.themeColor || '#0b63e5' },
+        handler: null,
+        onSuccess: null,
+        onFailed: null,
+        onPaymentFailed: null,
+        onSuspicious: null,
+        onExpired: null,
+        onCancelled: null,
+        onClose: null,
+        successUrl: scriptConfig.successUrl || '',
+        failedUrl: scriptConfig.failedUrl || '',
+        suspiciousUrl: scriptConfig.suspiciousUrl || '',
+        expiredUrl: scriptConfig.expiredUrl || '',
+        cancelledUrl: scriptConfig.cancelledUrl || ''
+      }, options);
+
+      // Normalize order ID
+      if (!this.options.orderId && this.options.order_id) {
+        this.options.orderId = this.options.order_id;
+      }
+      if (!this.options.order_id && this.options.orderId) {
+        this.options.order_id = this.options.orderId;
+      }
+
+      this.isOpen = false;
+      this.backdrop = null;
+      this.container = null;
+      this.iframe = null;
+
+      this._handleMessage = this._handleMessage.bind(this);
+    }
+
+    /**
+     * Primary static programmatic entry point: Youpi.pay(options)
+     */
+    static async pay(options = {}) {
+      const instance = new YoupiCheckout(options);
+
+      // If checkoutUrl is already provided, open modal directly
+      if (instance.options.checkoutUrl) {
+        instance.open();
+        return instance;
+      }
+
+      // If paymentId is already provided, construct checkoutUrl and open
+      if (instance.options.paymentId) {
+        instance.options.checkoutUrl = `${instance.options.portalUrl}/checkout/${instance.options.paymentId}`;
+        instance.open();
+        return instance;
+      }
+
+      throw new Error('Create the payment on your server using trusted order data, then pass checkoutUrl or paymentId to Youpi.pay(). Never put a merchant API secret in browser code.');
+    }
+
+    /**
+     * Backward-compatible static entry point: YoupiCheckout.open(options)
+     */
+    static open(options) {
+      const instance = new YoupiCheckout(options);
+      instance.open();
+      return instance;
+    }
+
+    /**
+     * Opens the responsive iframe checkout modal
+     */
+    open() {
+      if (!isBrowser) {
+        console.warn('YoupiCheckout.open() can only be invoked in a browser DOM environment.');
+        return;
+      }
+      if (this.isOpen) return;
+      this.isOpen = true;
+
+      YoupiCheckout._ensureStyles();
+
+      let targetUrl = '';
+      if (this.options.checkoutUrl) {
+        targetUrl = this.options.checkoutUrl;
+      } else if (this.options.paymentId) {
+        targetUrl = `${this.options.portalUrl}/checkout/${this.options.paymentId}`;
+      } else {
+        targetUrl = `${this.options.portalUrl}/checkout/demo`;
+      }
+
+      // Add embedded flag and custom params
+      const sep = targetUrl.includes('?') ? '&' : '?';
+      targetUrl = `${targetUrl}${sep}embedded=1`;
+
+      // Declare this page's origin so the checkout can target its postMessages
+      // even when the browser strips the referrer. Opaque origins (file:) and
+      // non-http(s) schemes must not be announced.
+      try {
+        const parsed = new URL(window.location.href);
+        if (parsed.protocol === 'http:' || parsed.protocol === 'https:') {
+          targetUrl += `&youpiParentOrigin=${encodeURIComponent(parsed.origin)}`;
+        }
+      } catch {}
+
+      if (this.options.amount) {
+        targetUrl += `&customAmount=${encodeURIComponent(this.options.amount)}`;
+      }
+      if (this.options.name) {
+        targetUrl += `&customName=${encodeURIComponent(this.options.name)}`;
+      }
+
+      this._injectModal(targetUrl);
+      window.addEventListener('message', this._handleMessage);
+    }
+
+    /**
+     * Closes the checkout modal
+     */
+    close(callback) {
+      if (!isBrowser || !this.isOpen) return;
+      this.isOpen = false;
+
+      window.removeEventListener('message', this._handleMessage);
+
+      if (this.container) {
+        this.container.classList.remove('active');
+        this.container.classList.add('closing');
+      }
+      if (this.backdrop) {
+        this.backdrop.classList.remove('active');
+      }
+
+      // The closing modal may no longer be the current one when its animation ends.
+      const closingBackdrop = this.backdrop;
+      setTimeout(() => {
+        if (closingBackdrop && closingBackdrop.parentNode) {
+          closingBackdrop.parentNode.removeChild(closingBackdrop);
+        }
+        if (this.backdrop === closingBackdrop) {
+          this.backdrop = null;
+          this.container = null;
+          this.iframe = null;
+        }
+
+        if (typeof this.options.onClose === 'function') {
+          this.options.onClose();
+        }
+        if (typeof callback === 'function') {
+          callback();
+        }
+      }, 350);
+    }
+
+    _injectModal(targetUrl) {
+      const backdrop = document.createElement('div');
+      backdrop.className = 'youpi-checkout-backdrop';
+
+      const container = document.createElement('div');
+      container.className = 'youpi-checkout-container';
+
+      const closeBtn = document.createElement('button');
+      closeBtn.className = 'youpi-checkout-close-btn';
+      closeBtn.textContent = '✕';
+      closeBtn.title = 'Close Checkout';
+      closeBtn.type = 'button';
+      closeBtn.onclick = () => {
+        try {
+          if (iframe && iframe.contentWindow) {
+            if (this._iframeOrigin) {
+              iframe.contentWindow.postMessage({ event: 'youpi.request_cancel' }, this._iframeOrigin);
+            }
+            return;
+          }
+        } catch (err) { }
+        this._dispatchCancelled();
+        this.close();
+      };
+
+      const iframe = document.createElement('iframe');
+      iframe.className = 'youpi-checkout-iframe';
+      iframe.src = sanitizeModalUrl(targetUrl);
+      // Only messages from this exact iframe/origin are trusted (see _handleMessage).
+      this._iframe = iframe;
+      try { this._iframeOrigin = new URL(targetUrl, window.location.href).origin; } catch { this._iframeOrigin = null; }
+      iframe.allow = 'payment';
+
+      container.appendChild(closeBtn);
+      container.appendChild(iframe);
+      backdrop.appendChild(container);
+      document.body.appendChild(backdrop);
+
+      requestAnimationFrame(() => {
+        backdrop.classList.add('active');
+        container.classList.add('active');
+      });
+
+      this.backdrop = backdrop;
+      this.container = container;
+      this.iframe = iframe;
+
+      // Invariant: ONLY the cross (X) button exits the payment gateway!
+      // Prevent outside touch/click on backdrop from closing the checkout modal.
+      const stopOutsideDismiss = (e) => {
+        if (e.target === backdrop) {
+          e.preventDefault();
+          e.stopPropagation();
+          if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+          return false;
+        }
+      };
+      backdrop.addEventListener('click', stopOutsideDismiss, true);
+      backdrop.addEventListener('touchstart', stopOutsideDismiss, { passive: false, capture: true });
+      backdrop.addEventListener('touchend', stopOutsideDismiss, { passive: false, capture: true });
+      backdrop.addEventListener('touchmove', stopOutsideDismiss, { passive: false, capture: true });
+      backdrop.addEventListener('pointerdown', stopOutsideDismiss, true);
+      backdrop.addEventListener('pointerup', stopOutsideDismiss, true);
+      backdrop.addEventListener('mousedown', stopOutsideDismiss, true);
+      backdrop.addEventListener('mouseup', stopOutsideDismiss, true);
+    }
+
+_isSafeRedirect(url) {
+      try {
+        const u = new URL(url, window.location.href);
+        return u.protocol === 'http:' || u.protocol === 'https:';
+      } catch {
+        return false;
+      }
+    }
+
+    /**
+     * Origin of the checkout iframe this instance embeds. Messages from any
+     * other origin are ignored so a third party cannot forge payment events.
+     */
+    _checkoutOrigin() {
+      try {
+        // Only an explicitly configured checkout URL is authoritative. `portalUrl` defaults
+        // to localhost, so including it would make this check reject legitimate messages.
+        const url = this.options.checkoutUrl;
+        if (url) return new URL(url, window.location.href).origin;
+      } catch (e) { }
+      return null;
+    }
+
+    _handleMessage(e) {
+      // Ignore messages from any window other than our checkout iframe (spoofed success events).
+      if (!this._iframe || e.source !== this._iframe.contentWindow) return;
+      if (!this._iframeOrigin || e.origin !== this._iframeOrigin) return;
+      if (!e.data || typeof e.data !== 'object') return;
+
+      const expectedOrigin = this._checkoutOrigin();
+      if (expectedOrigin && e.origin !== expectedOrigin) return;
+
+      const event = e.data.event;
+      const rawData = e.data.data || e.data;
+
+      if (event === 'youpi.payment_success') {
+        const successBackdrop = this.backdrop;
+        const payload = e.data.data || {};
+        const result = {
+          status: 'SUCCESS',
+          order_id: payload.orderId || this.options.orderId || this.options.order_id,
+          payment_mode: payload.method || 'UPI',
+          amount_received: Number(payload.amount || this.options.amount || 0),
+          utr: payload.bankRef || payload.utr || payload.reference || '',
+          timestamp: payload.completedAt || new Date().toISOString(),
+          metadata: payload.metadata || this.options.metadata || {},
+          raw: payload
+        };
+
+        YoupiCheckout._emitEvent('youpi:payment:success', result);
+        YoupiCheckout._emitEvent('youpi:payment:result', result);
+
+        if (typeof this.options.handler === 'function') {
+          this.options.handler(result);
+        }
+        if (typeof this.options.onSuccess === 'function') {
+          this.options.onSuccess(result);
+        }
+
+        setTimeout(() => {
+          if (!this.isOpen || this.backdrop !== successBackdrop) return;
+          this.close(() => {
+            if (this.options.successUrl) {
+              const delim = this.options.successUrl.includes('?') ? '&' : '?';
+              window.location.href = `${this.options.successUrl}${delim}order_id=${encodeURIComponent(result.order_id)}&amount=${encodeURIComponent(result.amount_received)}&utr=${encodeURIComponent(result.utr)}`;
+            }
+          });
+        }, 1500);
+      } else if (event === 'youpi.payment_observed' || event === 'youpi.payment_reconciled' || event === 'youpi.payment_manual_review') {
+        const payload = e.data.data || {};
+        const status = event === 'youpi.payment_reconciled'
+          ? 'RECONCILED'
+          : (event === 'youpi.payment_manual_review' ? 'MANUAL_REVIEW' : 'OBSERVED_SUCCESS');
+        const result = {
+          status,
+          order_id: payload.orderId || this.options.orderId || this.options.order_id,
+          payment_mode: payload.method || 'UPI',
+          amount_received: Number(payload.amount || this.options.amount || 0),
+          utr: payload.bankRef || payload.utr || payload.reference || '',
+          timestamp: payload.completedAt || new Date().toISOString(),
+          metadata: payload.metadata || this.options.metadata || {},
+          settlement_state: payload.settlementState || (status === 'RECONCILED' ? 'RECONCILED' : (status === 'MANUAL_REVIEW' ? 'MANUAL_REVIEW' : 'NOT_RECONCILED')),
+          raw: payload
+        };
+        const domEvent = status === 'RECONCILED'
+          ? 'youpi:payment:success'
+          : (status === 'MANUAL_REVIEW' ? 'youpi:payment:suspicious' : 'youpi:payment:observed');
+        YoupiCheckout._emitEvent(domEvent, result);
+        YoupiCheckout._emitEvent('youpi:payment:result', result);
+        if (typeof this.options.handler === 'function') this.options.handler(result);
+        if (status === 'RECONCILED' && typeof this.options.onSuccess === 'function') this.options.onSuccess(result);
+      } else if (event === 'youpi.payment_failed') {
+        const payload = e.data.data || e.data || {};
+        const result = {
+          status: 'FAILED',
+          order_id: payload.orderId || this.options.orderId || this.options.order_id,
+          payment_mode: payload.method || 'UPI',
+          amount_received: 0,
+          utr: '',
+          reason: payload.reason || payload.status || 'PAYMENT_FAILED',
+          timestamp: new Date().toISOString(),
+          metadata: payload.metadata || this.options.metadata || {},
+          raw: payload
+        };
+
+        YoupiCheckout._emitEvent('youpi:payment:failed', result);
+        YoupiCheckout._emitEvent('youpi:payment:result', result);
+
+        if (typeof this.options.onFailed === 'function') {
+          try { this.options.onFailed(result); } catch (err) { }
+        }
+        if (typeof this.options.onPaymentFailed === 'function') {
+          try { this.options.onPaymentFailed(result); } catch (err) { }
+        }
+
+        this.close(() => {
+          if (this.options.failedUrl) {
+            const delim = this.options.failedUrl.includes('?') ? '&' : '?';
+            window.location.href = `${this.options.failedUrl}${delim}order_id=${encodeURIComponent(result.order_id)}&reason=${encodeURIComponent(result.reason)}`;
+          } else if (payload.redirectUrl && this._isSafeRedirect(payload.redirectUrl) && payload.redirectUrl !== window.location.href && !payload.redirectUrl.includes('/checkout')) {
+            window.location.href = payload.redirectUrl;
+          }
+        });
+      } else if (event === 'youpi.payment_blocked' || event === 'youpi.payment_blocked_exit') {
+        const payload = e.data.data || e.data || {};
+        const result = {
+          status: 'SUSPICIOUS',
+          order_id: payload.orderId || this.options.orderId || this.options.order_id,
+          payment_mode: payload.method || 'UPI',
+          amount_received: 0,
+          utr: '',
+          reason: 'SECURITY_REVIEW_FLAGGED',
+          timestamp: new Date().toISOString(),
+          metadata: payload.metadata || this.options.metadata || {},
+          raw: payload
+        };
+
+        YoupiCheckout._emitEvent('youpi:payment:suspicious', result);
+        YoupiCheckout._emitEvent('youpi:payment:result', result);
+
+        if (typeof this.options.onSuspicious === 'function') {
+          try { this.options.onSuspicious(result); } catch (err) { }
+        }
+
+        this.close(() => {
+          if (this.options.suspiciousUrl) {
+            const delim = this.options.suspiciousUrl.includes('?') ? '&' : '?';
+            window.location.href = `${this.options.suspiciousUrl}${delim}order_id=${encodeURIComponent(result.order_id)}&reason=SUSPICIOUS`;
+          }
+        });
+      } else if (event === 'youpi.payment_expired') {
+        const payload = e.data.data || e.data || {};
+        const result = {
+          status: 'EXPIRED',
+          order_id: payload.orderId || this.options.orderId || this.options.order_id,
+          timestamp: new Date().toISOString()
+        };
+
+        YoupiCheckout._emitEvent('youpi:payment:expired', result);
+        YoupiCheckout._emitEvent('youpi:payment:result', result);
+
+        if (typeof this.options.onExpired === 'function') {
+          try { this.options.onExpired(result); } catch (err) { }
+        }
+
+        this.close(() => {
+          if (this.options.expiredUrl) {
+            const delim = this.options.expiredUrl.includes('?') ? '&' : '?';
+            window.location.href = `${this.options.expiredUrl}${delim}order_id=${encodeURIComponent(result.order_id)}`;
+          }
+        });
+      } else if (event === 'youpi.modal_close' || event === 'youpi.close' || event === 'youpi.cancel' || event === 'youpi.payment_cancelled') {
+        this._dispatchCancelled();
+        const redirectUrl = e.data.redirectUrl;
+        this.close(() => {
+          if (this.options.cancelledUrl) {
+            const delim = this.options.cancelledUrl.includes('?') ? '&' : '?';
+            window.location.href = `${this.options.cancelledUrl}${delim}order_id=${encodeURIComponent(this.options.orderId || '')}`;
+          } else if (redirectUrl && this._isSafeRedirect(redirectUrl) && redirectUrl !== window.location.href && !redirectUrl.includes('/checkout')) {
+            window.location.href = redirectUrl;
+          }
+        });
+      }
+    }
+
+    _dispatchCancelled() {
+      const result = {
+        status: 'CANCELLED',
+        order_id: this.options.orderId || this.options.order_id || '',
+        timestamp: new Date().toISOString()
+      };
+      YoupiCheckout._emitEvent('youpi:payment:cancelled', result);
+      YoupiCheckout._emitEvent('youpi:payment:result', result);
+
+      if (typeof this.options.onCancelled === 'function') {
+        try { this.options.onCancelled(result); } catch (e) { }
+      }
+    }
+
+    static _emitEvent(name, detail) {
+      if (!isBrowser) return;
+      try {
+        const ev = new CustomEvent(name, { detail, bubbles: true, cancelable: true });
+        window.dispatchEvent(ev);
+        document.dispatchEvent(ev);
+      } catch (e) { }
+    }
+
+    /**
+     * Handles clicks on elements with [data-youpi-pay] attribute
+     */
+    static handleButtonClick(btn) {
+      if (!btn) return;
+
+      const orderId = btn.getAttribute('data-order-id') || `ORDER-${Date.now()}`;
+      const amount = btn.getAttribute('data-amount') || '0';
+      const currency = btn.getAttribute('data-currency') || scriptConfig.currency || 'INR';
+      const name = btn.getAttribute('data-name') || scriptConfig.name || 'Merchant Store';
+      const description = btn.getAttribute('data-description') || 'Order Payment';
+
+      // Customer info
+      const customer = {
+        name: btn.getAttribute('data-customer-name') || '',
+        email: btn.getAttribute('data-customer-email') || '',
+        phone: btn.getAttribute('data-customer-phone') || btn.getAttribute('data-customer-mobile') || ''
+      };
+
+      // Metadata parsing
+      let metadata = {};
+      const rawMeta = btn.getAttribute('data-metadata');
+      if (rawMeta) {
+        try {
+          metadata = JSON.parse(rawMeta);
+        } catch (e) {
+          metadata = { raw: rawMeta };
+        }
+      }
+      // Gather any data-meta-* attributes
+      for (const attr of btn.attributes) {
+        if (attr.name.startsWith('data-meta-')) {
+          const key = attr.name.slice(10);
+          metadata[key] = attr.value;
+        }
+      }
+
+      const checkoutUrl = btn.getAttribute('data-checkout-url') || '';
+      const paymentId = btn.getAttribute('data-payment-id') || '';
+      const successUrl = btn.getAttribute('data-success-url') || scriptConfig.successUrl || '';
+      const failedUrl = btn.getAttribute('data-failed-url') || scriptConfig.failedUrl || '';
+      const suspiciousUrl = btn.getAttribute('data-suspicious-url') || scriptConfig.suspiciousUrl || '';
+      const expiredUrl = btn.getAttribute('data-expired-url') || scriptConfig.expiredUrl || '';
+      const cancelledUrl = btn.getAttribute('data-cancelled-url') || scriptConfig.cancelledUrl || '';
+
+      YoupiCheckout.pay({
+        order_id: orderId,
+        orderId: orderId,
+        amount: amount,
+        currency: currency,
+        name: name,
+        description: description,
+        customer: customer,
+        metadata: metadata,
+        checkoutUrl: checkoutUrl,
+        paymentId: paymentId,
+        successUrl: successUrl,
+        failedUrl: failedUrl,
+        suspiciousUrl: suspiciousUrl,
+        expiredUrl: expiredUrl,
+        cancelledUrl: cancelledUrl
+      }).catch(err => {
+        console.error('[YouPI JS] Pay error:', err);
+      });
+    }
+
+    static _ensureStyles() {
+      if (!isBrowser) return;
+      let styleEl = document.getElementById('youpi-checkout-styles');
+      if (!styleEl) {
+        styleEl = document.createElement('style');
+        styleEl.id = 'youpi-checkout-styles';
+        document.head.appendChild(styleEl);
+      }
+      styleEl.textContent = `
+        .youpi-checkout-backdrop {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          width: 100%;
+          height: 100vh;
+          height: 100dvh;
+          height: 100%;
+          background: rgba(12, 35, 64, 0.76);
+          backdrop-filter: blur(6px);
+          -webkit-backdrop-filter: blur(6px);
+          z-index: 2147483640;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 0;
+          transition: opacity 0.25s ease-out;
+          touch-action: pan-y;
+          overscroll-behavior: contain;
+          user-select: none;
+          -webkit-user-select: none;
+          -webkit-tap-highlight-color: transparent;
+        }
+        .youpi-checkout-backdrop.active {
+          opacity: 1;
+        }
+        .youpi-checkout-container {
+          position: relative;
+          width: 440px;
+          max-width: 95vw;
+          height: 680px;
+          max-height: 92vh;
+          background: #ffffff;
+          border-radius: 14px;
+          box-shadow: 0 25px 65px rgba(0, 0, 0, 0.5);
+          overflow: hidden;
+          transform: translateY(20px) scale(0.98);
+          transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+          display: flex;
+          flex-direction: column;
+          touch-action: auto !important;
+          user-select: auto !important;
+          -webkit-user-select: auto !important;
+        }
+        .youpi-checkout-container.active {
+          transform: translateY(0) scale(1);
+        }
+        .youpi-checkout-container.closing {
+          transform: translateY(20px) scale(0.96);
+        }
+        .youpi-checkout-iframe {
+          width: 100%;
+          height: 100%;
+          border: none;
+          flex: 1;
+          background: #ffffff;
+          touch-action: auto !important;
+        }
+        .youpi-checkout-close-btn {
+          position: absolute;
+          top: 14px;
+          right: 14px;
+          width: 28px;
+          height: 28px;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.2);
+          border: none;
+          color: #ffffff;
+          font-size: 14px;
+          cursor: pointer;
+          z-index: 10;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: background 0.15s;
+        }
+        .youpi-checkout-close-btn:hover {
+          background: rgba(255, 255, 255, 0.4);
+        }
+
+        /* DESKTOP / PC MODAL STYLES (Razorpay 2-Column Exact Layout) */
+        @media (min-width: 768px) {
+          .youpi-checkout-container {
+            width: 900px;
+            max-width: 95vw;
+            height: 600px;
+            max-height: 92vh;
+            border-radius: 16px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+          }
+          .youpi-checkout-close-btn {
+            display: none; /* Native in-modal close button inside the checkout header bar */
+          }
+        }
+
+        /* MOBILE BOTTOM DRAWER / BOTTOM SHEET STYLES */
+        @media (max-width: 767px) {
+          .youpi-checkout-backdrop {
+            align-items: flex-end;
+          }
+          .youpi-checkout-container {
+            width: 100vw;
+            max-width: 100vw;
+            height: 100dvh;
+            height: 100vh;
+            height: 100%;
+            max-height: 100dvh;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border-top-left-radius: 18px;
+            border-top-right-radius: 18px;
+            transform: translateY(100%);
+            touch-action: auto !important;
+            overflow: hidden;
+          }
+          .youpi-checkout-container.active {
+            transform: translateY(0);
+          }
+          .youpi-checkout-container.closing {
+            transform: translateY(100%);
+          }
+        }
+      `;
+    }
+  }
+
+  // Auto-bind click listener for all [data-youpi-pay] buttons on page
+  if (isBrowser) {
+    document.addEventListener('click', function (e) {
+      const btn = e.target && e.target.closest && e.target.closest('[data-youpi-pay]');
+      if (btn) {
+        e.preventDefault();
+        YoupiCheckout.handleButtonClick(btn);
+      }
+    });
+  }
+
+  // Export globals
+  globalScope.YoupiCheckout = YoupiCheckout;
+  globalScope.Youpi = YoupiCheckout;
+})(typeof window !== 'undefined' ? window : globalThis);
+
+</script></head><body class="bg-background-canvas font-body-md text-text-primary antialiased min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-card border-b border-border-subtle shadow-sm"><div class="h-[72px] md:h-24 max-w-6xl mx-auto px-gutter-mobile lg:px-gutter flex items-center gap-2 md:gap-space-md"><div class="w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden shrink-0 flex items-center justify-center bg-white shadow-sm"><img src="data:image/png;base64,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" alt="TMMK Official Flag Logo" class="w-full h-full object-contain"></div><div class="flex flex-col min-w-0 flex-1"><span id="header-title" class="text-[17px] sm:text-[19px] lg:text-[21px] leading-tight text-text-primary font-semibold tracking-tight whitespace-nowrap">Tamizhaga Murpokku Makkal Katchi</span><span class="text-[11px] sm:text-[13px] leading-tight text-text-muted tracking-wide uppercase whitespace-nowrap">Official Membership &amp; Donation Portal</span></div><div id="header-avatar" class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-primary flex items-center justify-center shrink-0 cursor-pointer"><span class="material-symbols-outlined text-on-primary text-[18px] md:text-[20px]">person</span></div></div></header><div id="site-nav-bar" class="fixed top-[72px] md:top-24 left-0 right-0 z-40 bg-surface-card border-b border-border-subtle shadow-sm"><div class="max-w-6xl mx-auto px-gutter-mobile lg:px-gutter py-1.5 md:py-0 md:h-12 grid grid-cols-4 gap-1.5 md:flex md:items-center md:justify-between md:gap-2"><nav class="contents md:flex md:items-center md:gap-1 md:min-w-0 md:flex-1"><a aria-current="page" class="font-label-md text-[11px] sm:text-[12px] md:text-label-md px-1 md:px-3 py-1.5 min-h-[32px] rounded-md text-center leading-tight flex items-center justify-center md:whitespace-nowrap transition-colors bg-primary text-on-primary shadow-sm" data-path="home" href="#">Home</a><a class="font-label-md text-[11px] sm:text-[12px] md:text-label-md px-1 md:px-3 py-1.5 min-h-[32px] rounded-md text-center leading-tight flex items-center justify-center md:whitespace-nowrap transition-colors text-text-muted hover:text-primary hover:bg-gold-tint" data-path="membership-registration" href="#">Membership</a><a class="font-label-md text-[11px] sm:text-[12px] md:text-label-md px-1 md:px-3 py-1.5 min-h-[32px] rounded-md text-center leading-tight flex items-center justify-center md:whitespace-nowrap transition-colors text-text-muted hover:text-primary hover:bg-gold-tint" data-path="donation-portal" href="#">Donate</a><a class="font-label-md text-[11px] sm:text-[12px] md:text-label-md px-1 md:px-3 py-1.5 min-h-[32px] rounded-md text-center leading-tight flex items-center justify-center md:whitespace-nowrap transition-colors text-text-muted hover:text-primary hover:bg-gold-tint" data-path="membership-status-and-id" href="#">Status &amp; Card</a><a class="font-label-md text-[11px] sm:text-[12px] md:text-label-md px-1 md:px-3 py-1.5 min-h-[32px] rounded-md text-center leading-tight flex items-center justify-center md:whitespace-nowrap transition-colors text-text-muted hover:text-primary hover:bg-gold-tint" data-path="contact-and-helpline" href="#">Helpline</a><button class="font-label-md text-[11px] sm:text-[12px] md:text-label-md px-1 md:px-3 py-1.5 min-h-[32px] rounded-md text-center leading-tight flex items-center justify-center md:whitespace-nowrap transition-colors text-text-muted hover:text-primary hover:bg-gold-tint border border-border-subtle" onclick="siteBack()" type="button" aria-label="Go back"><span class="material-symbols-outlined text-[14px] sm:text-[16px] mr-1">arrow_back</span><span>Back</span></button></nav><div id="lang-toggle" class="flex items-center gap-1.5 shrink-0"><button id="lang-ta" type="button" aria-pressed="true" class="font-label-sm text-[12px] font-bold whitespace-nowrap transition-colors">தமிழ்</button><span id="lang-track" role="switch" aria-label="Language" aria-checked="false" class="relative inline-block w-[52px] h-[28px] rounded-full bg-surface-container border border-border-subtle cursor-pointer shrink-0"><span id="lang-thumb" aria-hidden="true" class="absolute top-[3px] left-[3px] w-[20px] h-[20px] rounded-full bg-primary shadow-md transition-transform duration-300 ease-in-out" style="transform:translateX(0)"></span></span><button id="lang-en" type="button" aria-pressed="false" class="font-label-sm text-[12px] font-bold whitespace-nowrap transition-colors">English</button></div></div></div><main class="w-full pt-[160px] md:pt-[144px] bg-background-canvas flex-1"><div class="max-w-[960px] mx-auto px-4 py-8"><div class="flex flex-col w-full">
+<!-- Interactive Form Hub Wrapper (Max 940px) -->
+<div class="w-full max-w-[940px] mx-auto flex flex-col gap-y-space-lg">
+<!-- Top Metadata & Civic Header Breadcrumbs -->
+<div class="flex flex-col gap-y-space-xs">
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs font-label-md text-label-md text-text-muted">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">home</span>
+<span class="">Home</span>
+</a>
+<span class="text-border-subtle">/</span>
+<span class="text-primary font-semibold">Membership Registration</span>
+
+
+</nav>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm pt-space-xs">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-text-primary tracking-tight flex items-center gap-space-sm">
+<span class="">Join TMMK</span>
+<span class="text-primary font-normal text-headline-sm">| இணையுங்கள்</span>
+</h1>
+<p class="font-body-md text-body-md text-text-muted pt-0.5">
+            Register as a member or make a contribution through our official civic portal.
+          </p>
+</div>
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 bg-gold-tint border border-gold-warm/40 rounded-full self-start md:self-auto">
+<span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-primary font-semibold tracking-wide uppercase">2026-2029 Official Enrollment Phase</span>
+</div>
+</div>
+</div>
+<!-- SECTION 1: 5-Step Horizontal Progress Indicator -->
+<section aria-label="Application Progress" class="w-full bg-surface-card p-space-md sm:p-space-lg rounded-xl shadow-sm border border-border-subtle">
+<div class="relative flex items-center justify-between max-w-3xl mx-auto px-2">
+<!-- Connecting Line Background -->
+<div class="absolute left-6 right-6 top-5 -translate-y-1/2 h-0.5 bg-surface-container-highest z-0"></div>
+<!-- Active Progress Fill (Controlled via JS) -->
+<div class="absolute left-6 top-5 -translate-y-1/2 h-0.5 bg-primary transition-all duration-300 z-0" id="step-progress-fill" style="width: 0%;"></div>
+<!-- Step 1 Button -->
+<button class="step-nav-btn relative z-10 flex flex-col items-center group cursor-pointer focus:outline-none" data-step-target="1" onclick="goToStep(1)" type="button">
+<div class="w-10 h-10 rounded-full flex items-center justify-center font-label-md text-label-md font-bold transition-all bg-primary text-on-primary ring-4 ring-surface-card shadow-sm" id="step-circle-1">
+            1
+          </div>
+<span class="font-label-sm text-label-sm mt-2 transition-colors font-semibold text-primary" id="step-label-1">Choose</span>
+<span class="block text-[10px] text-text-muted leading-none">தேர்வு</span>
+</button>
+<!-- Step 2 Button -->
+<button class="step-nav-btn relative z-10 flex flex-col items-center group cursor-pointer focus:outline-none" data-step-target="2" onclick="applicationFlow='membership'; goToStep(2)" type="button">
+<div class="w-10 h-10 rounded-full flex items-center justify-center font-label-md text-label-md font-bold transition-all bg-surface-container-high text-text-muted ring-4 ring-surface-card" id="step-circle-2">
+            2
+          </div>
+<span class="font-label-sm text-label-sm mt-2 transition-colors text-text-muted" id="step-label-2">Details</span>
+<span class="block text-[10px] text-text-muted leading-none">விவரம்</span>
+</button>
+<!-- Step 3 Button -->
+<button class="step-nav-btn relative z-10 flex flex-col items-center group cursor-pointer focus:outline-none" data-step-target="3" onclick="goToStep(3)" type="button">
+<div class="w-10 h-10 rounded-full flex items-center justify-center font-label-md text-label-md font-bold transition-all bg-surface-container-high text-text-muted ring-4 ring-surface-card" id="step-circle-3">
+            3
+          </div>
+<span class="font-label-sm text-label-sm mt-2 transition-colors text-text-muted" id="step-label-3">Review</span>
+<span class="block text-[10px] text-text-muted leading-none">சரிபார்ப்பு</span>
+</button>
+<!-- Step 4 Button -->
+<button class="step-nav-btn relative z-10 flex flex-col items-center group cursor-pointer focus:outline-none" data-step-target="4" onclick="applicationFlow='donation'; goToStep(4)" type="button">
+<div class="w-10 h-10 rounded-full flex items-center justify-center font-label-md text-label-md font-bold transition-all bg-surface-container-high text-text-muted ring-4 ring-surface-card" id="step-circle-4">
+            4
+          </div>
+<span class="font-label-sm text-label-sm mt-2 transition-colors text-text-muted" id="step-label-4">Payment</span>
+<span class="block text-[10px] text-text-muted leading-none">கட்டணம்</span>
+</button>
+<!-- Step 5 Button -->
+<button class="step-nav-btn relative z-10 flex flex-col items-center group cursor-pointer focus:outline-none" data-step-target="5" onclick="goToStep(5)" type="button">
+<div class="w-10 h-10 rounded-full flex items-center justify-center font-label-md text-label-md font-bold transition-all bg-surface-container-high text-text-muted ring-4 ring-surface-card" id="step-circle-5">
+            5
+          </div>
+<span class="font-label-sm text-label-sm mt-2 transition-colors text-text-muted" id="step-label-5">Confirm</span>
+<span class="block text-[10px] text-text-muted leading-none">உறுதிப்படுத்தல்</span>
+</button>
+</div>
+</section>
+<!-- MULTI-STEP CONTENT PANELS -->
+<!-- STEP 1: CHOOSE REGISTRATION OR DONATION -->
+<div class="step-panel flex flex-col gap-space-lg w-full" id="step-panel-1">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg items-stretch">
+<!-- CARD A: Primary Membership Highlight -->
+<div class="bg-surface-card rounded-[14px] p-space-lg flex flex-col justify-between shadow-sm border border-border-subtle relative overflow-hidden transition-all hover:shadow-md">
+<!-- Top Accent Spine -->
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-primary"></div>
+<div class="flex flex-col gap-y-space-md">
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-primary border border-red-100">
+<span class="material-symbols-outlined text-[28px]">how_to_reg</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-space-sm py-1 rounded bg-gold-tint text-secondary border border-gold-warm/40 font-semibold">
+<span class="material-symbols-outlined text-[14px] text-gold-deep">verified</span>
+                Official Membership
+              </span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-text-primary tracking-tight">Become a Member</h2>
+<p class="font-label-md text-label-md text-primary font-medium">உறுப்பினர் சேர்க்கை படிவம்</p>
+<p class="font-body-sm text-body-sm text-text-muted mt-space-xs">
+                Register your details and join the organisation as an official member to participate in civic governance.
+              </p>
+</div>
+<!-- Fee Badge -->
+<div class="p-space-md bg-gold-tint/70 rounded-lg flex items-baseline justify-between border border-gold-warm/30">
+<div class="flex items-baseline gap-1">
+<span class="gradient-yellow-text font-headline-lg text-headline-lg font-bold">₹100</span>
+<span class="gradient-yellow-text font-label-sm text-label-sm">/ 3 Years</span>
+</div>
+<span class="gradient-yellow-text font-label-sm text-label-sm font-semibold text-right">
+                மூன்று ஆண்டுகள் செல்லுபடியாகும்
+              </span>
+</div>
+<!-- Feature Checklist -->
+<ul class="flex flex-col gap-y-space-sm pt-space-xs text-text-primary font-body-sm text-body-sm">
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<span class="">Official Digital Membership ID card with photo &amp; QR verification.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<span class="">Participation in grassroots constituency assemblies &amp; voting councils.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<span class="">Direct notifications and invitations to welfare programmes and community drives.</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-lg">
+<button class="w-full h-12 px-space-lg rounded-lg bg-primary hover:bg-[#a30d25] active:bg-[#8B0000] text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-space-sm transition-colors shadow-sm cursor-pointer" onclick="goToStep(2)" type="button">
+<span class="">Register Now</span>
+<span class="font-normal text-xs text-white/90">(பதிவு செய்க)</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- CARD B: Welfare Donation -->
+<div class="bg-surface-card rounded-[14px] p-space-lg flex flex-col justify-between shadow-sm border border-border-subtle relative overflow-hidden transition-all hover:shadow-md">
+<!-- Top Subtle Accent -->
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-gold-warm"></div>
+<div class="flex flex-col gap-y-space-md">
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-full bg-gold-tint flex items-center justify-center text-secondary border border-gold-warm/30">
+<span class="material-symbols-outlined text-[28px] text-primary">volunteer_activism</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-space-sm py-1 rounded bg-surface-container text-text-muted font-medium">
+                Tax Deductible Welfare Fund
+              </span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-text-primary tracking-tight">Make a Donation</h2>
+<p class="font-label-md text-label-md text-primary font-medium">பொது நல நன்கொடை</p>
+<p class="font-body-sm text-body-sm text-text-muted mt-space-xs">
+                Contribute towards supporting the organisation's community, medical relief, and social empowerment programs.
+              </p>
+</div>
+<!-- Quick Amount Selectors -->
+<div class="flex flex-col gap-y-space-xs">
+<label class="font-label-sm text-label-sm text-text-muted uppercase tracking-wider">Select Contribution</label>
+<div class="grid grid-cols-4 gap-2">
+<button class="amount-btn active h-11 rounded border border-primary bg-primary text-on-primary font-label-md text-label-md font-semibold transition-all shadow-sm" onclick="selectAmount(this, '250')" type="button">₹250</button>
+<button class="amount-btn h-11 rounded border border-border-subtle bg-surface-card hover:bg-gold-tint hover:border-gold-warm text-text-primary font-label-md text-label-md font-semibold transition-all" onclick="selectAmount(this, '500')" type="button">₹500</button>
+<button class="amount-btn h-11 rounded border border-border-subtle bg-surface-card hover:bg-gold-tint hover:border-gold-warm text-text-primary font-label-md text-label-md font-semibold transition-all" onclick="selectAmount(this, '1000')" type="button">₹1,000</button>
+<button class="amount-btn h-11 rounded border border-border-subtle bg-surface-card hover:bg-gold-tint hover:border-gold-warm text-text-primary font-label-md text-label-md font-semibold transition-all" onclick="selectAmount(this, 'custom')" type="button">Custom</button>
+</div>
+<input class="hidden w-full h-11 px-space-md border border-border-subtle rounded mt-2 font-body-sm text-body-sm focus:outline-none focus:border-primary text-text-primary" id="custom-donation-input" placeholder="Enter custom amount (₹)" type="number">
+</div>
+<!-- Impact Highlight -->
+<div class="p-space-sm bg-surface-container/60 rounded flex items-start gap-space-xs text-text-muted font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">favorite</span>
+<p class="text-[13px] leading-relaxed">
+                Every contribution directly supports ambulance networks, educational aid, disaster aid, and citizen rights initiatives across Tamil Nadu.
+              </p>
+</div>
+</div>
+<div class="pt-space-lg">
+<button class="w-full h-12 px-space-lg rounded-lg bg-surface-card hover:bg-red-50 border border-primary text-primary font-label-lg text-label-lg flex items-center justify-center gap-space-sm transition-colors cursor-pointer" onclick="goToStep(4)" type="button">
+<span class="">Donate Now</span>
+<span class="font-normal text-xs text-primary/80">(நன்கொடை அளிக்கவும்)</span>
+<span class="material-symbols-outlined text-[18px]">volunteer_activism</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Live Civic Metrics Banner -->
+<div class="w-full bg-surface-card border border-border-subtle rounded-xl p-space-md sm:p-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full bg-red-50 border border-red-100 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[26px]">groups_3</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">4,82,310+</span>
+<span class="font-body-sm text-body-sm text-text-muted block">Registered active members across 234 Assembly Constituencies</span>
+</div>
+</div>
+<div class="flex items-center gap-space-lg border-t sm:border-t-0 sm:border-l border-border-subtle pt-space-sm sm:pt-0 sm:pl-space-lg">
+<div>
+<span class="font-label-sm text-label-sm text-text-muted block uppercase">38 Districts</span>
+<span class="font-label-md text-label-md text-primary font-semibold">100% Verified</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-text-muted block uppercase">Govt. Audited</span>
+<span class="font-label-md text-label-md text-primary font-semibold">Section 8 Compliant</span>
+</div>
+</div>
+</div>
+</div>
+<!-- STEP 2: MEMBER REGISTRATION DETAILS FORM -->
+<div class="step-panel hidden flex flex-col gap-space-lg w-full" id="step-panel-2">
+<form class="bg-surface-card rounded-xl p-space-lg sm:p-space-xl border border-border-subtle shadow-sm flex flex-col gap-y-space-lg" id="member-registration-form" onsubmit="event.preventDefault(); if (validatePhoto()) goToStep(3);">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-border-subtle pb-space-md gap-space-xs">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Step 2 of 5</span>
+<h2 class="font-headline-md text-headline-md text-text-primary tracking-tight">Member Information</h2>
+<p class="font-body-sm text-body-sm text-text-muted">உறுப்பினர் தனிப்பட்ட விவரங்கள்</p>
+</div>
+<div class="text-right text-text-muted font-label-sm text-label-sm">
+<span class="text-primary font-bold">*</span> Indicates mandatory fields
+          </div>
+</div>
+<!-- 2-Column Responsive Form Fields -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-space-lg gap-y-5">
+<!-- Full Name -->
+<div class="flex flex-col gap-y-1">
+<label class="font-label-sm text-label-sm text-text-muted uppercase font-semibold">Full Name (முழு பெயர்) <span class="text-primary">*</span></label>
+<input class="h-12 px-space-md bg-surface-card border border-border-subtle rounded text-text-primary font-body-sm text-body-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" id="form-name" placeholder="As per Aadhaar / Voter ID" required="" type="text">
+</div>
+<!-- Father's / Husband's Name -->
+<div class="flex flex-col gap-y-1">
+<label class="font-label-sm text-label-sm text-text-muted uppercase font-semibold">Father's / Spouse's Name (தந்தை / கணவர் பெயர்) <span class="text-primary">*</span></label>
+<input class="h-12 px-space-md bg-surface-card border border-border-subtle rounded text-text-primary font-body-sm text-body-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" id="form-guardian" placeholder="Father or Husband name" required="" type="text">
+</div>
+<!-- Date of Birth -->
+<div class="flex flex-col gap-y-1">
+<label class="font-label-sm text-label-sm text-text-muted uppercase font-semibold">Date of Birth (பிறந்த தேதி) <span class="text-primary">*</span></label>
+<input class="h-12 px-space-md bg-surface-card border border-border-subtle rounded text-text-primary font-body-sm text-body-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" id="form-dob" required="" type="date">
+</div>
+<!-- Gender Radio/Select -->
+<div class="flex flex-col gap-y-1">
+<label class="font-label-sm text-label-sm text-text-muted uppercase font-semibold">Gender (பாலினம்) <span class="text-primary">*</span></label>
+<div class="grid grid-cols-3 gap-2 pt-1">
+<label class="h-12 flex items-center justify-center gap-2 border border-border-subtle rounded bg-surface-card cursor-pointer has-[:checked]:border-primary has-[:checked]:bg-red-50 font-label-md text-label-md">
+<input class="accent-primary w-4 h-4" name="gender" type="radio" value="Male">
+<span class="">Male (ஆண்)</span>
+</label>
+<label class="h-12 flex items-center justify-center gap-2 border border-border-subtle rounded bg-surface-card cursor-pointer has-[:checked]:border-primary has-[:checked]:bg-red-50 font-label-md text-label-md">
+<input class="accent-primary w-4 h-4" name="gender" type="radio" value="Female">
+<span class="">Female (பெண்)</span>
+</label>
+<label class="h-12 flex items-center justify-center gap-2 border border-border-subtle rounded bg-surface-card cursor-pointer has-[:checked]:border-primary has-[:checked]:bg-red-50 font-label-md text-label-md">
+<input class="accent-primary w-4 h-4" name="gender" type="radio" value="Other">
+<span class="">Other</span>
+</label>
+</div>
+</div>
+<!-- Mobile Number with OTP Verification Preview -->
+<div class="flex flex-col gap-y-1">
+<label class="font-label-sm text-label-sm text-text-muted uppercase font-semibold">Mobile Number (அலைபேசி எண்) <span class="text-primary">*</span></label>
+<div class="relative flex items-center">
+<span class="absolute left-3 font-body-sm text-body-sm text-text-muted font-medium border-r border-border-subtle pr-2">+91</span>
+<input class="w-full h-12 pl-16 pr-28 bg-surface-card border border-border-subtle rounded text-text-primary font-body-sm text-body-sm focus:outline-none focus:border-primary" id="form-mobile" maxlength="10" placeholder="10-digit mobile" required="" type="tel">
+<div class="absolute right-2 px-2 py-1 bg-red-50 text-primary border border-red-100 rounded font-label-sm text-label-sm flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+                Verified
+              </div>
+</div>
+</div>
+<!-- Email Address -->
+<div class="flex flex-col gap-y-1">
+<label class="font-label-sm text-label-sm text-text-muted uppercase font-semibold">Email Address (மின்னஞ்சல்) <span class="text-primary">*</span></label>
+<input class="h-12 px-space-md bg-surface-card border border-border-subtle rounded text-text-primary font-body-sm text-body-sm focus:outline-none focus:border-primary" id="form-email" placeholder="name@domain.com" type="email" required="">
+</div>
+<!-- Residential Address (Full Row) -->
+<div class="flex flex-col gap-y-1 md:col-span-2">
+<label class="font-label-sm text-label-sm text-text-muted uppercase font-semibold">Residential Street Address (முகவரி) <span class="text-primary">*</span></label>
+<input class="h-12 px-space-md bg-surface-card border border-border-subtle rounded text-text-primary font-body-sm text-body-sm focus:outline-none focus:border-primary" id="form-address" placeholder="Door No, Street Name, Locality" required="" type="text">
+</div>
+<!-- District -->
+<div class="flex flex-col gap-y-1">
+<label class="font-label-sm text-label-sm text-text-muted uppercase font-semibold">District (மாவட்டம்) <span class="text-primary">*</span></label>
+<select class="h-12 px-space-md bg-surface-card border border-border-subtle rounded text-text-primary font-body-sm text-body-sm focus:outline-none focus:border-primary" id="form-district" required="">
+<option value="" disabled selected>Select your district</option>
+</select>
+</div>
+<!-- Assembly Constituency -->
+<div class="flex flex-col gap-y-1">
+<label class="font-label-sm text-label-sm text-text-muted uppercase font-semibold">Assembly Constituency (சட்டமன்ற தொகுதி) <span class="text-primary">*</span></label>
+<select class="h-12 px-space-md bg-surface-card border border-border-subtle rounded text-text-primary font-body-sm text-body-sm focus:outline-none focus:border-primary" id="form-constituency" required="" disabled="">
+<option value="" disabled selected>Select a district first</option>
+</select>
+</div>
+<!-- Postal Pincode -->
+<div class="flex flex-col gap-y-1">
+<label class="font-label-sm text-label-sm text-text-muted uppercase font-semibold">Postal Pincode (அஞ்சல் குறியீடு) <span class="text-primary">*</span></label>
+<input class="h-12 px-space-md bg-surface-card border border-border-subtle rounded text-text-primary font-body-sm text-body-sm focus:outline-none focus:border-primary" id="form-pincode" maxlength="6" placeholder="6-digit PIN" required="" type="text">
+</div>
+<!-- Occupation -->
+<div class="flex flex-col gap-y-1">
+<label class="font-label-sm text-label-sm text-text-muted uppercase font-semibold">Occupation (தொழில்)</label>
+<input class="h-12 px-space-md bg-surface-card border border-border-subtle rounded text-text-primary font-body-sm text-body-sm focus:outline-none focus:border-primary" id="form-occupation" placeholder="e.g. Advocate, Merchant, Teacher" type="text">
+</div>
+<input accept="image/jpeg,image/png" class="sr-only" id="form-photo" type="file">
+<!-- Passport-size Photo Upload Box (Full Row) -->
+<div class="flex flex-col gap-y-1 md:col-span-2 pt-2">
+<label class="font-label-sm text-label-sm text-text-muted uppercase font-semibold">Passport-Size Photo (புகைப்படம்) <span class="text-primary">*</span></label>
+<div class="border-2 border-dashed border-border-subtle hover:border-primary rounded-lg p-space-md flex flex-col sm:flex-row items-center gap-space-md bg-surface-container/30 transition-colors">
+<div class="w-20 aspect-[4/5] rounded bg-surface-card border border-border-subtle overflow-hidden flex items-center justify-center shrink-0 shadow-sm relative">
+<span class="material-symbols-outlined text-[32px] text-text-muted" id="photo-placeholder">person</span><img alt="" class="hidden w-full h-full object-cover" id="photo-preview-img">
+</div>
+<div class="flex flex-col gap-y-1 text-center sm:text-left">
+<div class="flex items-center gap-space-xs justify-center sm:justify-start">
+<span class="material-symbols-outlined text-primary text-[20px]">cloud_upload</span>
+<span class="font-label-md text-label-md text-text-primary font-semibold">Upload Member Photo for Digital ID Card</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted">
+                  Drag and drop your recent passport photograph here, or browse from device.
+                </p>
+<div class="flex items-center gap-space-md pt-1 justify-center sm:justify-start">
+<label for="form-photo" class="px-space-md py-1.5 bg-surface-card border border-border-subtle hover:border-primary rounded text-primary font-label-sm text-label-sm font-semibold transition-colors" role="button">
+                    Browse File
+                  </label>
+<span class="font-label-sm text-label-sm text-text-muted">JPG, PNG up to 2MB (Min 300x300px)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Form Navigation Buttons -->
+<div class="flex flex-row items-center justify-between gap-space-md pt-space-lg border-t border-border-subtle">
+<button class="flex-1 min-w-0 px-2 sm:px-space-lg text-center leading-tight h-12 px-space-lg border border-border-subtle hover:bg-surface-container rounded-lg font-label-lg text-label-lg text-text-muted hover:text-text-primary flex items-center justify-center gap-space-xs transition-colors" onclick="goToStep(1)" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span class="">Back to Selection</span>
+</button>
+<button class="flex-1 min-w-0 px-2 sm:px-space-lg text-center leading-tight h-12 px-space-xl bg-primary hover:bg-[#a30d25] active:bg-[#8B0000] text-on-primary rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-space-xs transition-colors shadow-sm cursor-pointer" type="submit">
+<span class="">Continue to Review</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+<!-- STEP 3: APPLICATION REVIEW & DECLARATION -->
+<div class="step-panel hidden flex flex-col gap-space-lg w-full" id="step-panel-3">
+<div class="bg-surface-card rounded-xl p-space-lg sm:p-space-xl border border-border-subtle shadow-sm flex flex-col gap-y-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-border-subtle pb-space-md gap-space-xs">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Step 3 of 5</span>
+<h2 class="font-headline-md text-headline-md text-text-primary tracking-tight">Review Your Application</h2>
+<p class="font-body-sm text-body-sm text-text-muted">பதிவு விவரங்களை உறுதிப்படுத்தவும்</p>
+</div>
+<button class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:underline self-start sm:self-auto" onclick="goToStep(2)" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+<span class="">Edit Information</span>
+</button>
+</div>
+<!-- Review Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Personal Profile Section -->
+<div class="bg-red-50/40 rounded-lg p-space-md border border-border-subtle flex flex-col gap-y-space-sm">
+<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md font-semibold border-b border-border-subtle/50 pb-2">
+<span class="material-symbols-outlined text-[18px]">person</span>
+<span class="">Personal Details</span>
+</div>
+<div class="flex flex-col gap-y-2 text-body-sm font-body-sm">
+<div>
+<span class="text-text-muted text-[12px] block">Full Name</span>
+<span class="font-semibold text-text-primary" id="rev-name">—</span>
+</div>
+<div>
+<span class="text-text-muted text-[12px] block">Father / Guardian</span>
+<span class="text-text-primary" id="rev-guardian">—</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div>
+<span class="text-text-muted text-[12px] block">DOB</span>
+<span class="text-text-primary" id="rev-dob">—</span>
+</div>
+<div>
+<span class="text-text-muted text-[12px] block">Gender</span>
+<span class="text-text-primary" id="rev-gender">—</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Contact & Location Section -->
+<div class="bg-red-50/40 rounded-lg p-space-md border border-border-subtle flex flex-col gap-y-space-sm">
+<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md font-semibold border-b border-border-subtle/50 pb-2">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+<span class="">Contact &amp; Assembly</span>
+</div>
+<div class="flex flex-col gap-y-2 text-body-sm font-body-sm">
+<div>
+<span class="text-text-muted text-[12px] block">Mobile (SMS Verified)</span>
+<span class="font-semibold text-text-primary" id="rev-mobile">—</span>
+</div>
+<div>
+<span class="text-text-muted text-[12px] block">Constituency &amp; District</span>
+<span class="font-semibold text-text-primary" id="rev-assembly">—</span>
+</div>
+<div>
+<span class="text-text-muted text-[12px] block">Pincode</span>
+<span class="text-text-primary" id="rev-pincode">—</span>
+</div>
+</div>
+</div>
+<!-- Membership Plan Summary -->
+<div class="bg-gold-tint/60 rounded-lg p-space-md border border-gold-warm/40 flex flex-col justify-between">
+<div class="flex flex-col gap-y-space-sm">
+<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md font-semibold border-b border-gold-warm/30 pb-2">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+<span class="">Membership Tier</span>
+</div>
+<div class="flex flex-col gap-y-1 font-body-sm">
+<span class="font-semibold text-text-primary">Regular Cadre Membership</span>
+<span class="text-text-muted text-[13px]">Validity: 3 Years (2026 - 2029)</span>
+<span class="text-text-muted text-[13px]">Includes Bilingual PVC Digital Card</span>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-gold-warm/30 flex items-baseline justify-between">
+<span class="font-label-sm text-label-sm text-text-muted">Total Payable:</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">₹100.00</span>
+</div>
+</div>
+</div>
+<!-- Official Declaration Checkbox -->
+<div class="p-space-md bg-surface-container/40 rounded-lg border border-border-subtle">
+<label class="flex items-start gap-space-sm cursor-pointer">
+<input class="mt-1 w-6 h-6 shrink-0 cursor-pointer" id="declaration-check" type="checkbox" aria-label="Accept declaration" style="appearance:auto;-webkit-appearance:checkbox;accent-color:#6e0f26;pointer-events:auto;position:relative;z-index:2;">
+<div class="font-body-sm text-body-sm text-text-primary">
+<span class="font-semibold block">Declaration &amp; Civic Commitment (உறுதிமொழி):</span>
+<span class="">I hereby declare that all the information furnished above is accurate to the best of my knowledge. I abide by the Constitution, principles of social justice, and organizational by-laws of the Tamizhaga Murpokku Makkal Katchi (TMMK).</span>
+</div>
+</label>
+</div>
+<!-- Review Action Buttons -->
+<div class="flex flex-row items-center justify-between gap-space-md pt-space-md border-t border-border-subtle">
+<button class="flex-1 min-w-0 px-2 sm:px-space-lg text-center leading-tight h-12 px-space-lg border border-border-subtle hover:bg-surface-container rounded-lg font-label-lg text-label-lg text-text-muted hover:text-text-primary flex items-center justify-center gap-space-xs transition-colors" onclick="goToStep(2)" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span class="">Back to Edit</span>
+</button>
+<button class="flex-1 min-w-0 px-2 sm:px-space-lg text-center leading-tight h-12 px-space-xl bg-primary hover:bg-[#a30d25] active:bg-[#8B0000] text-on-primary rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-space-xs transition-colors shadow-sm cursor-pointer" onclick="goToStep(4)" type="button">
+<span class="">Proceed to Official Payment (₹100)</span>
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</button>
+</div>
+</div>
+</div>
+<!-- STEP 4: OFFICIAL PAYMENT GATEWAY & UPI VERIFICATION -->
+<div class="step-panel hidden flex flex-col gap-space-lg w-full" id="step-panel-4">
+<div class="bg-surface-card rounded-xl p-space-lg sm:p-space-xl border border-border-subtle shadow-sm flex flex-col gap-y-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-border-subtle pb-space-md gap-space-xs">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Step 4 of 5</span>
+<h2 class="font-headline-md text-headline-md text-text-primary tracking-tight">Official Payment &amp; Verification</h2>
+<p class="font-body-sm text-body-sm text-text-muted">அதிகாரப்பூர்வ கட்டணச் செலுத்துகை</p>
+</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-primary bg-red-50 border border-red-100 px-space-sm py-1 rounded">
+<span class="material-symbols-outlined text-[16px]">security</span>
+<span class="">256-bit Secure Civic Gateway</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left: UPI QR Code & Instructions (5 Cols) -->
+<div class="lg:col-span-5 bg-red-50/30 rounded-xl p-space-lg border border-border-subtle flex flex-col items-center text-center">
+<span class="font-label-sm text-label-sm text-text-muted uppercase tracking-wider font-semibold">Official UPI QR Code</span>
+<button class="w-full max-w-xs min-h-14 px-space-md bg-primary hover:bg-[#a30d25] text-on-primary rounded-lg font-label-lg text-label-lg font-semibold shadow-sm my-space-md" onclick="payWithYoupi()" type="button">Pay Securely (YOUPI)</button><button class="w-full max-w-xs min-h-12 px-space-md border border-border-subtle hover:bg-surface-container rounded-lg font-label-md text-label-md text-text-primary mb-space-md" onclick="payWithGooglePay()" type="button">Pay with Google Pay</button>
+<p class="font-body-sm text-body-sm text-text-muted">
+              Tap the button below to pay securely using the official Google Pay app.
+            </p>
+<!-- UPI ID with Copy -->
+<div class="w-full mt-space-md p-space-xs bg-surface-card rounded border border-border-subtle flex items-center justify-between">
+<div class="text-left px-2 truncate">
+<span class="text-[10px] text-text-muted block leading-none">OFFICIAL VPA / UPI ID</span>
+<span class="font-label-sm text-label-sm text-primary font-mono font-semibold" id="upi-vpa-text">vinvizhi811@oksbi</span>
+</div>
+<button class="h-8 px-space-sm bg-surface-container hover:bg-gold-tint hover:text-primary rounded text-text-primary font-label-sm text-label-sm font-semibold transition-colors flex items-center gap-1 shrink-0" id="copy-btn" onclick="copyUPI()" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span class="" id="copy-label">Copy</span>
+</button>
+</div>
+</div>
+<!-- Right: Fee Breakdown & UTR Transaction Entry (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col justify-between gap-y-space-md">
+<!-- Fee Breakdown -->
+<div class="bg-surface-container/30 rounded-lg p-space-md border border-border-subtle flex flex-col gap-y-2">
+<span class="font-label-md text-label-md text-text-primary font-semibold">Payment Summary (கட்டண விவரம்)</span>
+<div class="flex items-center justify-between text-body-sm text-text-muted pt-1">
+<span class="">3-Year Membership Fee</span>
+<span class="font-semibold text-text-primary">₹100.00</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-text-muted">
+<span class="">Processing &amp; Digital ID Card Fee</span>
+<span class="text-primary font-semibold">FREE (₹0.00)</span>
+</div>
+<div class="border-t border-border-subtle pt-2 flex items-center justify-between font-label-lg text-label-lg">
+<span class="text-text-primary font-bold">Total Amount</span>
+<span class="text-primary font-bold text-headline-sm">₹100.00</span>
+</div>
+</div>
+<!-- UTR Input Form -->
+<div class="flex flex-col gap-y-space-md">
+<div class="flex flex-col gap-y-1">
+<label class="font-label-sm text-label-sm text-text-muted uppercase font-semibold">
+                  12-Digit UPI / UTR Transaction Reference Number <span class="text-primary">*</span>
+</label>
+<input class="h-12 px-space-md bg-surface-card border border-border-subtle rounded text-text-primary font-mono text-body-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" id="utr-input" maxlength="16" placeholder="e.g. 402918239012" type="text">
+<span class="text-[12px] text-text-muted">Find the 12-digit UPI Ref ID / UTR in your payment app receipt history.</span>
+</div>
+<!-- Payment Receipt Screenshot (Optional) -->
+<div class="flex flex-col gap-y-1">
+<label class="font-label-sm text-label-sm text-text-muted uppercase font-semibold">Upload Payment Screenshot <span class="text-text-muted text-xs font-normal">(Optional for instant approval)</span></label>
+<div class="h-12 px-space-md bg-surface-card border border-border-subtle rounded flex items-center justify-between text-body-sm text-text-muted">
+<span class="truncate">payment_receipt_jan2026.png (412 KB)</span>
+<button class="text-primary font-label-sm text-label-sm font-semibold hover:underline shrink-0" type="button">Change</button>
+</div>
+</div>
+</div>
+<!-- Security Trust Notice -->
+<div class="p-space-sm bg-red-50/60 border border-red-100 rounded flex items-center gap-space-sm text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[20px] shrink-0 text-primary">verified_user</span>
+<span class="">All donations &amp; membership dues are directly credited into TMMK Central Account verified by Election Commission standards.</span>
+</div>
+<!-- Submit Action -->
+<div class="flex flex-row items-center justify-between gap-space-md pt-space-sm border-t border-border-subtle">
+<button class="flex-1 min-w-0 px-2 sm:px-space-lg text-center leading-tight h-12 px-space-lg border border-border-subtle hover:bg-surface-container rounded-lg font-label-lg text-label-lg text-text-muted hover:text-text-primary flex items-center justify-center gap-space-xs transition-colors" onclick="goToStep(3)" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span class="">Back</span>
+</button>
+<button class="flex-1 min-w-0 px-2 sm:px-space-lg text-center leading-tight h-12 px-space-xl bg-primary hover:bg-[#a30d25] active:bg-[#8B0000] text-on-primary rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-space-xs transition-colors shadow-sm cursor-pointer" onclick="submitApplication()" type="button">
+<span class="">Submit &amp; Verify Payment</span>
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- STEP 5: SUBMISSION CONFIRMATION & OFFICIAL DIGITAL ID CARD PREVIEW -->
+<div class="step-panel hidden flex flex-col gap-space-lg w-full" id="step-panel-5">
+<div class="bg-surface-card rounded-xl p-space-lg sm:p-space-xl border border-border-subtle shadow-sm flex flex-col gap-y-space-lg">
+<!-- Success State Header -->
+<div class="flex flex-col items-center text-center gap-y-2 py-space-sm">
+<div class="w-16 h-16 rounded-full bg-red-50 border border-red-100 text-primary flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-[36px]">check_circle</span>
+</div>
+<span class="font-label-sm text-label-sm px-space-md py-0.5 rounded-full bg-gold-tint text-secondary border border-gold-warm/40 font-bold uppercase tracking-wider">
+            Verified &amp; Issued
+          </span>
+<h2 class="font-headline-lg text-headline-lg text-text-primary tracking-tight">
+            Application Submitted Successfully!
+          </h2>
+<p class="font-label-md text-label-md text-primary font-medium">விண்ணப்பம் அதிகாரப்பூர்வமாக ஏற்கப்பட்டது</p>
+<p class="font-body-sm text-body-sm text-text-muted max-w-lg">
+            Your membership registration is confirmed. A receipt and confirmation SMS have been dispatched to your verified mobile number.
+          </p>
+<div class="inline-flex items-center gap-2 mt-2 px-space-md py-2 bg-surface-container rounded-lg font-mono text-body-sm font-semibold text-text-primary border border-border-subtle">
+<span class="text-text-muted font-sans font-normal text-xs uppercase">Ref Number:</span>
+<span class="text-primary" id="ref-number">—</span>
+</div>
+</div>
+<!-- HIGH-FIDELITY OFFICIAL DIGITAL MEMBERSHIP CARD (PRINTABLE PVC PREVIEW) -->
+<div class="w-full flex flex-col items-center py-space-md">
+<span class="font-label-sm text-label-sm text-text-muted uppercase tracking-widest mb-space-sm font-semibold">
+            Official PVC Digital Membership Card Preview (முன்பார்வை)
+          </span>
+<!-- ID Card Shell (Standard CR80 Ratio 85.6 x 53.98 mm scaled) -->
+<div class="mx-auto bg-surface-card rounded-xl border-2 border-primary/40 shadow-lg overflow-hidden relative flex flex-col justify-between" style="width: 85.60mm; max-width: 100%; aspect-ratio: 1011 / 638;">
+<!-- Card Header Strip -->
+<div class="bg-primary text-on-primary px-4 py-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img src="data:image/png;base64,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" alt="TMMK Official Flag Logo" class="w-8 h-8 rounded-full bg-surface-card p-0.5 object-contain">
+<div class="flex flex-col">
+<span class="font-label-sm text-[12px] font-bold tracking-tight leading-tight">தமிழக முற்போக்கு மக்கள் கட்சி</span>
+<span class="text-[9px] text-gold-tint tracking-wider uppercase">Tamizhaga Murpokku Makkal Katchi</span>
+</div>
+</div>
+<span class="text-[9px] font-bold px-1.5 py-0.5 rounded bg-surface-card/20 text-on-primary uppercase tracking-wider">
+                ID CARD
+              </span>
+</div>
+<!-- Card Body -->
+<div class="p-4 flex items-start gap-4 flex-1">
+<!-- Member Photo Frame -->
+<div class="w-24 aspect-[4/5] rounded border border-border-subtle bg-surface-container-low overflow-hidden shrink-0 shadow-sm relative">
+<img alt="" class="hidden w-full h-full object-cover" id="card-photo">
+<div class="absolute bottom-0 inset-x-0 bg-primary/90 text-on-primary text-[8px] text-center font-bold py-0.5 uppercase">
+                  VERIFIED
+                </div>
+</div>
+<!-- Member Data Specs -->
+<div class="flex-1 flex flex-col justify-between h-full text-left py-0.5">
+<div>
+<span class="text-[9px] text-text-muted uppercase font-semibold block leading-none">Member Name / பெயர்</span>
+<span class="font-headline-sm text-[15px] font-bold text-text-primary block leading-tight" id="card-name">—</span>
+</div>
+<div class="grid grid-cols-2 gap-x-2 gap-y-1 text-[11px] pt-1">
+<div>
+<span class="text-[8px] text-text-muted uppercase block leading-none">Member ID</span>
+<span class="font-mono font-bold text-primary" id="card-member-id">—</span>
+</div>
+<div>
+<span class="text-[8px] text-text-muted uppercase block leading-none">Constituency</span>
+<span class="font-semibold text-text-primary truncate block" id="card-constituency">—</span>
+</div>
+<div>
+<span class="text-[8px] text-text-muted uppercase block leading-none">District</span>
+<span class="text-text-primary" id="card-district">—</span>
+</div>
+<div>
+<span class="text-[8px] text-text-muted uppercase block leading-none">Validity</span>
+<span class="font-semibold text-primary">2026 - 2029</span>
+</div>
+</div>
+</div>
+<!-- Barcode & QR Code Seal -->
+<div class="flex flex-col items-center justify-between h-full shrink-0 border-l border-border-subtle pl-2">
+<div class="w-12 h-12 bg-surface-card p-1 border border-border-subtle rounded">
+<svg class="w-full h-full text-text-primary" fill="currentColor" viewBox="0 0 24 24">
+<rect fill="#c8102e" height="7" width="7" x="0" y="0"></rect>
+<rect fill="#c8102e" height="7" width="7" x="17" y="0"></rect>
+<rect fill="#c8102e" height="7" width="7" x="0" y="17"></rect>
+<rect height="4" width="2" x="9" y="3"></rect>
+<rect height="4" width="2" x="13" y="3"></rect>
+<rect height="2" width="4" x="3" y="9"></rect>
+<rect fill="#c8102e" height="4" width="4" x="10" y="10"></rect>
+<rect height="2" width="4" x="17" y="9"></rect>
+<rect height="4" width="2" x="9" y="17"></rect>
+<rect height="4" width="4" x="14" y="17"></rect>
+</svg>
+</div>
+<span class="text-[7px] font-mono text-text-muted">AUTH SECURE</span>
+</div>
+</div>
+<!-- Card Bottom Barcode & Security Strip -->
+<div class="bg-surface-container px-4 py-1.5 border-t border-border-subtle flex items-center justify-between text-[8px] text-text-muted">
+<span class="">NO 82/1 5TH STREET PATHBANABA NAGAR ADAYAR CHENNAI 600020</span>
+<span class="font-mono tracking-widest text-text-primary font-bold">||| | | |||| | ||| |||| |</span>
+</div>
+</div>
+</div>
+<!-- Download & Auxiliary Action Buttons -->
+<div class="flex flex-row items-center justify-center gap-space-sm pt-space-sm border-t border-border-subtle">
+<button class="flex-1 min-w-0 px-2 sm:px-space-lg text-center leading-tight h-12 px-space-lg bg-primary hover:bg-[#a30d25] active:bg-[#8B0000] text-on-primary rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-space-xs transition-colors shadow-sm" onclick="triggerDownload()" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
+<span class="">Download Membership Card (PDF)</span>
+</button>
+<button class="flex-1 min-w-0 px-2 sm:px-space-lg text-center leading-tight h-12 px-space-lg bg-surface-card border border-border-subtle hover:bg-surface-container rounded-lg font-label-lg text-label-lg text-text-primary flex items-center justify-center gap-space-xs transition-colors" onclick="printReceipt()" type="button">
+<span class="material-symbols-outlined text-[20px]">print</span>
+<span class="">Print Receipt</span>
+</button>
+<button class="flex-1 min-w-0 px-2 sm:px-space-lg text-center leading-tight h-12 px-space-md text-text-muted hover:text-primary font-label-md text-label-md transition-colors" onclick="goToStep(1)" type="button">
+            Start New Application
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Functional Flow Script for Seamless In-Page Navigation -->
+<script>
+    let currentStep = 1;
+    let paymentVerified = false;
+
+    function goToStep(stepNumber) {
+      if (stepNumber < 1 || stepNumber > 5) return;
+      if (stepNumber === 5 && !paymentVerified) {
+        alert('Your ID card will appear after your payment submission is verified.');
+        stepNumber = 4;
+      }
+      if (stepNumber > 2 && !isMemberFormReady()) {
+        alert('Please complete your member details and upload your photo first.');
+        stepNumber = 2;
+      }
+      if (stepNumber > 3 && !document.getElementById('declaration-check').checked) {
+        alert('Please accept the declaration to continue.');
+        stepNumber = 3;
+      }
+      currentStep = stepNumber;
+
+      // Update Panels
+      document.querySelectorAll('.step-panel').forEach((panel) => {
+        panel.classList.add('hidden');
+      });
+      const activePanel = document.getElementById('step-panel-' + stepNumber);
+      if (activePanel) {
+        activePanel.classList.remove('hidden');
+      }
+
+      // Update Progress Fill Line Percentage
+      const fillPercentage = ((stepNumber - 1) / 4) * 100;
+      const progressFill = document.getElementById('step-progress-fill');
+      if (progressFill) {
+        progressFill.style.width = fillPercentage + '%';
+      }
+
+      // Update Step Circles & Labels
+      for (let i = 1; i <= 5; i++) {
+        const circle = document.getElementById('step-circle-' + i);
+        const label = document.getElementById('step-label-' + i);
+        
+        if (!circle || !label) continue;
+
+        if (i < stepNumber) {
+          // Completed
+          circle.className = "w-10 h-10 rounded-full flex items-center justify-center font-label-md text-label-md font-bold transition-all bg-primary text-on-primary ring-4 ring-surface-card shadow-sm cursor-pointer";
+          circle.innerHTML = '<span class="material-symbols-outlined text-[20px]">check</span>';
+          label.className = "font-label-sm text-label-sm mt-2 transition-colors font-semibold text-primary";
+        } else if (i === stepNumber) {
+          // Active
+          circle.className = "w-10 h-10 rounded-full flex items-center justify-center font-label-md text-label-md font-bold transition-all bg-primary text-on-primary ring-4 ring-surface-card shadow-sm";
+          circle.innerText = i;
+          label.className = "font-label-sm text-label-sm mt-2 transition-colors font-bold text-primary";
+        } else {
+          // Upcoming
+          circle.className = "w-10 h-10 rounded-full flex items-center justify-center font-label-md text-label-md font-bold transition-all bg-surface-container-high text-text-muted ring-4 ring-surface-card";
+          circle.innerText = i;
+          label.className = "font-label-sm text-label-sm mt-2 transition-colors text-text-muted";
+        }
+      }
+
+      // Sync form review data if jumping to Step 3
+      if (stepNumber === 3) {
+        syncReviewData();
+      }
+
+      applyLanguage();
+      // Smooth scroll back to top of portal container
+      window.scrollTo({ top: 100, behavior: 'smooth' });
+    }
+
+    // ---------- Language switch (Tamil / English) ----------
+    const I18N = { "® ERP Developed by Julius Infotech Pvt. Ltd, THOOTHUKUDI, INDIA": ["® ERP Developed by Julius Infotech Pvt. Ltd, THOOTHUKUDI, INDIA", "® ERP உருவாக்கம்: Julius Infotech Pvt. Ltd, தூத்துக்குடி, இந்தியா"],"Tamizhaga Murpokku Makkal Katchi": ["Tamizhaga Murpokku Makkal Katchi", "தமிழக முற்போக்கு மக்கள் கட்சி"], "தமிழக முற்போக்கு மக்கள் கட்சி": ["Tamizhaga Murpokku Makkal Katchi", "தமிழக முற்போக்கு மக்கள் கட்சி"], "Official Membership & Donation Portal": ["Official Membership & Donation Portal", "அதிகாரப்பூர்வ உறுப்பினர் & நன்கொடை இணையதளம்"], "Home": ["Home", "முகப்பு"], "Membership": ["Membership", "உறுப்பினர்"], "Donate": ["Donate", "நன்கொடை"], "Status & Card": ["Status & Card", "நிலை & அட்டை"], "Helpline": ["Helpline", "உதவி எண்"], "Membership Registration": ["Membership Registration", "உறுப்பினர் பதிவு"], "Join TMMK": ["Join TMMK", "TMMK-இல் இணையுங்கள்"], "| இணையுங்கள்": ["", ""], "Register as a member or make a contribution through our official civic portal.": ["Register as a member or make a contribution through our official civic portal.", "உறுப்பினராகப் பதிவு செய்யவோ அல்லது எங்கள் அதிகாரப்பூர்வ குடிமை இணையதளம் வழியாக நன்கொடை அளிக்கவோ."], "2026-2029 Official Enrollment Phase": ["2026-2029 Official Enrollment Phase", "2026-2029 அதிகாரப்பூர்வ சேர்க்கைக் கட்டம்"], "Choose": ["Choose", "தேர்வு"], "தேர்வு": ["", ""], "Details": ["Details", "விவரம்"], "விவரம்": ["", ""], "Review": ["Review", "சரிபார்ப்பு"], "சரிபார்ப்பு": ["", ""], "Payment": ["Payment", "கட்டணம்"], "கட்டணம்": ["", ""], "Confirm": ["Confirm", "உறுதிப்படுத்தல்"], "உறுதிப்படுத்தல்": ["", ""], "Official Membership": ["Official Membership", "அதிகாரப்பூர்வ உறுப்பினர்"], "Become a Member": ["Become a Member", "உறுப்பினராகுங்கள்"], "உறுப்பினர் சேர்க்கை படிவம்": ["Membership Enrollment Form", "உறுப்பினர் சேர்க்கை படிவம்"], "Register your details and join the organisation as an official member to participate in civic governance.": ["Register your details and join the organisation as an official member to participate in civic governance.", "உங்கள் விவரங்களைப் பதிவு செய்து, குடிமை நிர்வாகத்தில் பங்கேற்க அதிகாரப்பூர்வ உறுப்பினராக இணையுங்கள்."], "/ 3 Years": ["/ 3 Years", "/ 3 ஆண்டுகள்"], "மூன்று ஆண்டுகள் செல்லுபடியாகும்": ["Valid for 3 years", "மூன்று ஆண்டுகள் செல்லுபடியாகும்"], "Official Digital Membership ID card with photo & QR verification.": ["Official Digital Membership ID card with photo & QR verification.", "புகைப்படம் & QR சரிபார்ப்புடன் கூடிய அதிகாரப்பூர்வ டிஜிட்டல் உறுப்பினர் அடையாள அட்டை."], "Participation in grassroots constituency assemblies & voting councils.": ["Participation in grassroots constituency assemblies & voting councils.", "அடிமட்டத் தொகுதிக் கூட்டங்கள் மற்றும் வாக்குக் குழுக்களில் பங்கேற்பு."], "Direct notifications and invitations to welfare programmes and community drives.": ["Direct notifications and invitations to welfare programmes and community drives.", "நலத்திட்டங்கள் மற்றும் சமூக முயற்சிகளுக்கான நேரடி அறிவிப்புகள் மற்றும் அழைப்புகள்."], "Register Now": ["Register Now", "இப்போதே பதிவு செய்க"], "(பதிவு செய்க)": ["", ""], "Tax Deductible Welfare Fund": ["Tax Deductible Welfare Fund", "வரி விலக்குப் பெறும் நல நிதி"], "Make a Donation": ["Make a Donation", "நன்கொடை அளியுங்கள்"], "பொது நல நன்கொடை": ["Public Welfare Donation", "பொது நல நன்கொடை"], "Contribute towards supporting the organisation's community, medical relief, and social empowerment programs.": ["Contribute towards supporting the organisation's community, medical relief, and social empowerment programs.", "அமைப்பின் சமூக, மருத்துவ நிவாரண மற்றும் சமூக அதிகாரமளிப்புத் திட்டங்களுக்கு ஆதரவளிக்கவும்."], "Select Contribution": ["Select Contribution", "நன்கொடைத் தொகையைத் தேர்வு செய்க"], "Custom": ["Custom", "தனிப்பயன்"], "Every contribution directly supports ambulance networks, educational aid, disaster aid, and citizen rights initiatives across Tamil Nadu.": ["Every contribution directly supports ambulance networks, educational aid, disaster aid, and citizen rights initiatives across Tamil Nadu.", "ஒவ்வொரு நன்கொடையும் தமிழ்நாடு முழுவதும் ஆம்புலன்ஸ் சேவைகள், கல்வி உதவி, பேரிடர் உதவி மற்றும் குடிமக்கள் உரிமை முயற்சிகளுக்கு நேரடியாக ஆதரவளிக்கிறது."], "Donate Now": ["Donate Now", "இப்போதே நன்கொடை அளிக்கவும்"], "(நன்கொடை அளிக்கவும்)": ["", ""], "Registered active members across 234 Assembly Constituencies": ["Registered active members across 234 Assembly Constituencies", "234 சட்டமன்றத் தொகுதிகளில் பதிவு செய்யப்பட்ட செயலில் உள்ள உறுப்பினர்கள்"], "38 Districts": ["38 Districts", "38 மாவட்டங்கள்"], "100% Verified": ["100% Verified", "100% சரிபார்க்கப்பட்டது"], "Govt. Audited": ["Govt. Audited", "அரசு தணிக்கை"], "Section 8 Compliant": ["Section 8 Compliant", "பிரிவு 8 இணக்கம்"], "Step 2 of 5": ["Step 2 of 5", "படி 2 / 5"], "Step 3 of 5": ["Step 3 of 5", "படி 3 / 5"], "Step 4 of 5": ["Step 4 of 5", "படி 4 / 5"], "Member Information": ["Member Information", "உறுப்பினர் தகவல்"], "உறுப்பினர் தனிப்பட்ட விவரங்கள்": ["Member's personal details", "உறுப்பினர் தனிப்பட்ட விவரங்கள்"], "Indicates mandatory fields": ["Indicates mandatory fields", "கட்டாய புலங்களைக் குறிக்கிறது"], "Full Name (முழு பெயர்)": ["Full Name", "முழு பெயர்"], "Father's / Spouse's Name (தந்தை / கணவர் பெயர்)": ["Father's / Spouse's Name", "தந்தை / கணவர் பெயர்"], "Date of Birth (பிறந்த தேதி)": ["Date of Birth", "பிறந்த தேதி"], "Gender (பாலினம்)": ["Gender", "பாலினம்"], "Male (ஆண்)": ["Male", "ஆண்"], "Female (பெண்)": ["Female", "பெண்"], "Other": ["Other", "மற்றவை"], "Mobile Number (அலைபேசி எண்)": ["Mobile Number", "அலைபேசி எண்"], "Verified": ["Verified", "சரிபார்க்கப்பட்டது"], "Email Address (மின்னஞ்சல்)": ["Email Address", "மின்னஞ்சல்"], "(Optional)": ["(Optional)", "(விருப்பத்தேர்வு)"], "Residential Street Address (முகவரி)": ["Residential Street Address", "முகவரி"], "District (மாவட்டம்)": ["District", "மாவட்டம்"], "Select district": ["Select district", "மாவட்டத்தைத் தேர்ந்தெடுக்கவும்"], "Assembly Constituency (சட்டமன்ற தொகுதி)": ["Assembly Constituency", "சட்டமன்றத் தொகுதி"], "Select district first": ["Select district first", "முதலில் மாவட்டத்தைத் தேர்ந்தெடுக்கவும்"], "Postal Pincode (அஞ்சல் குறியீடு)": ["Postal Pincode", "அஞ்சல் குறியீடு"], "Occupation (தொழில்)": ["Occupation", "தொழில்"], "Passport-Size Photo (புகைப்படம்)": ["Passport-Size Photo", "கடவுச்சீட்டு அளவுப் புகைப்படம்"], "Upload Member Photo for Digital ID Card": ["Upload Member Photo for Digital ID Card", "டிஜிட்டல் அடையாள அட்டைக்கான உறுப்பினர் புகைப்படத்தைப் பதிவேற்றவும்"], "Drag and drop your recent passport photograph here, or browse from device.": ["Drag and drop your recent passport photograph here, or browse from device.", "உங்கள் சமீபத்திய கடவுச்சீட்டு புகைப்படத்தை இங்கே இழுத்து விடவும், அல்லது சாதனத்திலிருந்து தேர்வு செய்யவும்."], "Browse File": ["Browse File", "கோப்பைத் தேர்வு செய்க"], "JPG, PNG up to 2MB (Min 300x300px)": ["JPG, PNG up to 2MB (Min 300x300px)", "JPG, PNG 2MB வரை (குறைந்தபட்சம் 300x300px)"], "Back to Selection": ["Back to Selection", "தேர்வுக்குத் திரும்பு"], "Continue to Review": ["Continue to Review", "மதிப்பாய்வுக்குத் தொடரவும்"], "Review Your Application": ["Review Your Application", "உங்கள் விண்ணப்பத்தை மதிப்பாய்வு செய்க"], "பதிவு விவரங்களை உறுதிப்படுத்தவும்": ["Please confirm your registration details", "பதிவு விவரங்களை உறுதிப்படுத்தவும்"], "Edit Information": ["Edit Information", "தகவலைத் திருத்து"], "Personal Details": ["Personal Details", "தனிப்பட்ட விவரங்கள்"], "Full Name": ["Full Name", "முழு பெயர்"], "Father / Guardian": ["Father / Guardian", "தந்தை / பாதுகாவலர்"], "DOB": ["DOB", "பிறந்த தேதி"], "Gender": ["Gender", "பாலினம்"], "Contact & Assembly": ["Contact & Assembly", "தொடர்பு & சட்டமன்றத் தொகுதி"], "Mobile (SMS Verified)": ["Mobile (SMS Verified)", "அலைபேசி (SMS சரிபார்க்கப்பட்டது)"], "Constituency & District": ["Constituency & District", "தொகுதி & மாவட்டம்"], "Pincode": ["Pincode", "அஞ்சல் குறியீடு"], "Membership Tier": ["Membership Tier", "உறுப்பினர் நிலை"], "Regular Cadre Membership": ["Regular Cadre Membership", "வழக்கமான தொண்டர் உறுப்பினர்"], "Validity: 3 Years (2026 - 2029)": ["Validity: 3 Years (2026 - 2029)", "செல்லுபடி: 3 ஆண்டுகள் (2026 - 2029)"], "Includes Bilingual PVC Digital Card": ["Includes Bilingual PVC Digital Card", "இருமொழி PVC டிஜிட்டல் அட்டை உள்ளடங்கும்"], "Total Payable:": ["Total Payable:", "செலுத்த வேண்டிய மொத்தத் தொகை:"], "Declaration & Civic Commitment (உறுதிமொழி):": ["Declaration & Civic Commitment:", "அறிவிப்பு & குடிமை உறுதிமொழி:"], "I hereby declare that all the information furnished above is accurate to the best of my knowledge. I abide by the Constitution, principles of social justice, and organizational by-laws of the Tamizhaga Murpokku Makkal Katchi (TMMK).": ["I hereby declare that all the information furnished above is accurate to the best of my knowledge. I abide by the Constitution, principles of social justice, and organizational by-laws of the Tamizhaga Murpokku Makkal Katchi (TMMK).", "மேலே அளிக்கப்பட்டுள்ள அனைத்துத் தகவல்களும் எனக்குத் தெரிந்தவரை சரியானவை என்று இதன்மூலம் அறிவிக்கிறேன். அரசியலமைப்பு, சமூக நீதிக் கொள்கைகள் மற்றும் தமிழகமுற்போக்கு மக்கள் கட்சியின் (TMMK) நிறுவன விதிகளைப் பின்பற்றுவேன்."], "Back to Edit": ["Back to Edit", "திருத்தத்திற்குத் திரும்பு"], "Proceed to Official Payment (₹100)": ["Proceed to Official Payment (₹100)", "அதிகாரப்பூர்வ கட்டணத்திற்குத் தொடரவும் (₹100)"], "Official Payment & Verification": ["Official Payment & Verification", "அதிகாரப்பூர்வ கட்டணம் & சரிபார்ப்பு"], "அதிகாரப்பூர்வ கட்டணச் செலுத்துகை": ["Official Payment Gateway", "அதிகாரப்பூர்வ கட்டணச் செலுத்துகை"], "256-bit Secure Civic Gateway": ["256-bit Secure Civic Gateway", "256-பிட் பாதுகாப்பான குடிமை நுழைவாயில்"], "Official UPI QR Code": ["Official UPI QR Code", "அதிகாரப்பூர்வ UPI QR குறியீடு"], "Scan with any UPI app: Google Pay, PhonePe, Paytm, BHIM, or Mobile Banking.": ["Scan with any UPI app: Google Pay, PhonePe, Paytm, BHIM, or Mobile Banking.", "Google Pay, PhonePe, Paytm, BHIM அல்லது மொபைல் வங்கி உள்ளிட்ட எந்த UPI செயலி மூலமும் ஸ்கேன் செய்யவும்."], "OFFICIAL VPA / UPI ID": ["OFFICIAL VPA / UPI ID", "அதிகாரப்பூர்வ VPA / UPI ஐடி"], "Copy": ["Copy", "நகலெடு"], "Copied!": ["Copied!", "நகலெடுக்கப்பட்டது!"], "Payment Summary (கட்டண விவரம்)": ["Payment Summary", "கட்டணச் சுருக்கம்"], "3-Year Membership Fee": ["3-Year Membership Fee", "3 ஆண்டு உறுப்பினர் கட்டணம்"], "Processing & Digital ID Card Fee": ["Processing & Digital ID Card Fee", "செயலாக்க & டிஜிட்டல் அடையாள அட்டைக் கட்டணம்"], "FREE (₹0.00)": ["FREE (₹0.00)", "இலவசம் (₹0.00)"], "Total Amount": ["Total Amount", "மொத்தத் தொகை"], "12-Digit UPI / UTR Transaction Reference Number": ["12-Digit UPI / UTR Transaction Reference Number", "12 இலக்க UPI / UTR பரிவர்த்தனைக் குறிப்பு எண்"], "Find the 12-digit UPI Ref ID / UTR in your payment app receipt history.": ["Find the 12-digit UPI Ref ID / UTR in your payment app receipt history.", "உங்கள் கட்டணச் செயலியின் ரசீது வரலாற்றில் 12 இலக்க UPI குறிப்பு ID / UTR-ஐக் கண்டறியவும்."], "Upload Payment Screenshot": ["Upload Payment Screenshot", "கட்டணத் திரைப்பிடிப்பைப் பதிவேற்றவும்"], "(Optional for instant approval)": ["(Optional for instant approval)", "(உடனடி ஒப்புதலுக்கு விருப்பத்தேர்வு)"], "Change": ["Change", "மாற்று"], "All donations & membership dues are directly credited into TMMK Central Account verified by Election Commission standards.": ["All donations & membership dues are directly credited into TMMK Central Account verified by Election Commission standards.", "அனைத்து நன்கொடைகளும் உறுப்பினர் கட்டணங்களும் தேர்தல் ஆணைய தரநிலைகளின்படி சரிபார்க்கப்பட்ட TMMK மத்திய கணக்கில் நேரடியாக வரவு வைக்கப்படுகின்றன."], "Back": ["Back", "பின்செல்"], "Submit & Verify Payment": ["Submit & Verify Payment", "சமர்ப்பித்துக் கட்டணத்தைச் சரிபார்க்கவும்"], "Verified & Issued": ["Verified & Issued", "சரிபார்க்கப்பட்டு வழங்கப்பட்டது"], "Application Submitted Successfully!": ["Application Submitted Successfully!", "விண்ணப்பம் வெற்றிகரமாகச் சமர்ப்பிக்கப்பட்டது!"], "விண்ணப்பம் அதிகாரப்பூர்வமாக ஏற்கப்பட்டது": ["Your application has been officially accepted", "விண்ணப்பம் அதிகாரப்பூர்வமாக ஏற்கப்பட்டது"], "Your membership registration is confirmed. A receipt and confirmation SMS have been dispatched to your verified mobile number.": ["Your membership registration is confirmed. A receipt and confirmation SMS have been dispatched to your verified mobile number.", "உங்கள் உறுப்பினர் பதிவு உறுதி செய்யப்பட்டது. ரசீதும் உறுதிப்படுத்தல் SMS-உம் உங்கள் சரிபார்க்கப்பட்ட அலைபேசி எண்ணுக்கு அனுப்பப்பட்டுள்ளன."], "Ref Number:": ["Ref Number:", "குறிப்பு எண்:"], "Official PVC Digital Membership Card Preview (முன்பார்வை)": ["Official PVC Digital Membership Card Preview", "அதிகாரப்பூர்வ PVC டிஜிட்டல் உறுப்பினர் அட்டை முன்தோற்றம்"], "ID CARD": ["ID CARD", "அடையாள அட்டை"], "VERIFIED": ["VERIFIED", "சரிபார்க்கப்பட்டது"], "Member Name / பெயர்": ["Member Name", "உறுப்பினர் பெயர்"], "Member ID": ["Member ID", "உறுப்பினர் அடையாள எண்"], "Constituency": ["Constituency", "தொகுதி"], "District": ["District", "மாவட்டம்"], "Validity": ["Validity", "செல்லுபடி"], "AUTH SECURE": ["AUTH SECURE", "பாதுகாப்பு சரிபார்ப்பு"], "NO 82/1 5TH STREET PATHBANABA NAGAR ADAYAR CHENNAI 600020": ["NO 82/1 5TH STREET PATHBANABA NAGAR ADAYAR CHENNAI 600020", "எண் 82/1, 5வது தெரு, பாத்பனாபா நகர், அடையார், சென்னை 600020"], "Download Membership Card (PDF)": ["Download Membership Card", "உறுப்பினர் அட்டையைப் பதிவிறக்கு"], "Print Receipt": ["Print Receipt", "ரசீதை அச்சிடு"], "Start New Application": ["Start New Application", "புதிய விண்ணப்பத்தைத் தொடங்கு"], "Be a Part of the Change": ["Be a Part of the Change", "மாற்றத்தின் ஒரு பகுதியாகுங்கள்"], "Join us today and take the next step towards active participation.": ["Join us today and take the next step towards active participation.", "இன்றே எங்களுடன் இணைந்து செயலில் பங்கேற்பதை நோக்கி அடுத்த அடியை எடுத்து வையுங்கள்."], "Connecting people through membership, participation and a shared commitment to Tamil Nadu's progress.": ["Connecting people through membership, participation and a shared commitment to Tamil Nadu's progress.", "உறுப்பினர், பங்கேற்பு மற்றும் தமிழ்நாட்டின் முன்னேற்றத்திற்கான பகிரப்பட்ட அர்ப்பணிப்பின் மூலம் மக்களை இணைக்கிறோம்."], "Authorized Civic & Party Portal": ["Authorized Civic & Party Portal", "அங்கீகரிக்கப்பட்ட குடிமை & கட்சி இணையதளம்"], "Quick Links": ["Quick Links", "விரைவு இணைப்புகள்"], "Membership Terms": ["Membership Terms", "உறுப்பினர் விதிமுறைகள்"], "Privacy Policy": ["Privacy Policy", "தனியுரிமைக் கொள்கை"], "Contact Us": ["Contact Us", "எங்களைத் தொடர்பு கொள்ளுங்கள்"], "Contact & Support": ["Contact & Support", "தொடர்பு & ஆதரவு"], "Need Assistance?": ["Need Assistance?", "உதவி தேவையா?"], "Toll-Free Helpline: 9444013530": ["Toll-Free Helpline: 9444013530", "கட்டணமில்லா உதவி எண்: 9444013530"], "NO 82/1 5TH STREET PATHBANABA NAGAR ADAYAR CHENNAI 600020": ["NO 82/1 5TH STREET PATHBANABA NAGAR ADAYAR CHENNAI 600020", "எண் 82/1, 5வது தெரு, பாத்பனாபா நகர், அடையார், சென்னை 600020"], "© 2026 Tamizhaga Murpokku Makkal Katchi. All rights reserved.": ["© 2026 Tamizhaga Murpokku Makkal Katchi. All rights reserved.", "© 2026 தமிழக முற்போக்கு மக்கள் கட்சி. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை."], "Privacy": ["Privacy", "தனியுரிமை"], "Terms": ["Terms", "விதிமுறைகள்"], "Security Verified 256-bit SSL": ["Security Verified 256-bit SSL", "பாதுகாப்பு சரிபார்க்கப்பட்டது 256-bit SSL"]};
+    const I18N_PH = { "Enter your district": ["Enter your district", "உங்கள் மாவட்டத்தை உள்ளிடவும்"], "Enter your assembly constituency": ["Enter your assembly constituency", "உங்கள் சட்டமன்றத் தொகுதியை உள்ளிடவும்"],"As per Aadhaar / Voter ID": ["As per Aadhaar / Voter ID", "ஆதார் / வாக்காளர் அடையாள அட்டையின்படி"], "Father or Husband name": ["Father or Husband name", "தந்தை அல்லது கணவர் பெயர்"], "10-digit mobile": ["10-digit mobile", "10 இலக்க அலைபேசி எண்"], "Door No, Street Name, Locality": ["Door No, Street Name, Locality", "கதவு எண், தெருப் பெயர், பகுதி"], "6-digit PIN": ["6-digit PIN", "6 இலக்க அஞ்சல் குறியீடு"], "e.g. Advocate, Merchant, Teacher": ["e.g. Advocate, Merchant, Teacher", "எ.கா. வழக்கறிஞர், வணிகர், ஆசிரியர்"], "Enter custom amount (₹)": ["Enter custom amount (₹)", "தனிப்பயன் தொகையை உள்ளிடவும் (₹)"], "e.g. 402918239012": ["e.g. 402918239012", "எ.கா. 402918239012"]};
+    const TAMIL_RE = /[\u0B80-\u0BFF]/;
+    let currentLang = 'ta';
+
+    // Find [English, Tamil] for a piece of page text.
+    function lookup(text) {
+      const core = text.trim();
+      if (!core) return null;
+      if (I18N[core]) return I18N[core];
+      // "English (Tamil)" pattern, e.g. "Chennai (சென்னை)"
+      const m = core.match(/^(.*?)\s*\(([^()]*)\)$/);
+      if (m && m[1] && !TAMIL_RE.test(m[1]) && TAMIL_RE.test(m[2])) return [m[1], m[2]];
+      return null;
+    }
+
+    function applyLanguage() {
+      const idx = currentLang === 'ta' ? 1 : 0;
+      const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+      const nodes = [];
+      while (walker.nextNode()) nodes.push(walker.currentNode);
+
+      nodes.forEach(node => {
+        const parent = node.parentElement;
+        if (!parent || parent.closest('script, style, #lang-toggle, .material-symbols-outlined')) return;
+
+        // Keep the page's own text; re-read it if a script changed the text since our last pass.
+        if (node._out === undefined || node.nodeValue !== node._out) node._orig = node.nodeValue;
+
+        const pair = lookup(node._orig);
+        let out = node._orig;
+        let hide = false;
+        if (pair) {
+          const lead = node._orig.match(/^\s*/)[0];
+          const trail = node._orig.match(/\s*$/)[0];
+          const val = pair[idx];
+          if (val === '') { out = ''; hide = true; }
+          else out = lead + val + trail;
+        }
+        if (hide && parent.children.length === 0) {
+          parent.style.display = 'none';
+          parent.dataset.langHidden = '1';
+        } else if (parent.dataset.langHidden) {
+          parent.style.display = '';
+          delete parent.dataset.langHidden;
+        }
+        node.nodeValue = out;
+        node._out = out;
+      });
+
+      document.querySelectorAll('[placeholder]').forEach(el => {
+        if (el._phEn === undefined) el._phEn = el.getAttribute('placeholder');
+        const pair = I18N_PH[el._phEn];
+        el.setAttribute('placeholder', pair ? pair[idx] : el._phEn);
+      });
+    }
+
+    function setLang(lang) {
+      currentLang = lang;
+      document.documentElement.lang = lang === 'ta' ? 'ta' : 'en';
+      const ta = document.getElementById('lang-ta');
+      const en = document.getElementById('lang-en');
+      ta.setAttribute('aria-pressed', String(lang === 'ta'));
+      en.setAttribute('aria-pressed', String(lang === 'en'));
+      ta.classList.remove('bg-primary');
+      ta.classList.toggle('text-on-primary', lang === 'ta');
+      ta.classList.toggle('shadow-sm', lang === 'ta');
+      ta.classList.toggle('text-text-muted', lang !== 'ta');
+      en.classList.remove('bg-primary');
+      en.classList.toggle('text-on-primary', lang === 'en');
+      en.classList.toggle('shadow-sm', lang === 'en');
+      en.classList.toggle('text-text-muted', lang !== 'en');
+      const thumb = document.getElementById('lang-thumb');
+      if (thumb) thumb.style.transform = lang === 'en' ? 'translateX(26px)' : 'translateX(0)';
+      const track = document.getElementById('lang-track');
+      if (track) track.setAttribute('aria-checked', String(lang === 'en'));
+      applyLanguage();
+    }
+
+    document.getElementById('lang-ta').addEventListener('click', () => setLang('ta'));
+    document.getElementById('lang-en').addEventListener('click', () => setLang('en'));
+    document.getElementById('lang-track').addEventListener('click', () => setLang(currentLang === 'ta' ? 'en' : 'ta'));
+    // Translate the whole page once it has finished loading (the footer comes after this script).
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => setLang('ta'));
+    } else {
+      setLang('ta');
+    }
+
+    let selectedPhotoURL = null;
+    document.getElementById('form-photo').addEventListener('change', function () { handlePhotoChange(this); });
+
+    function handlePhotoChange(input) {
+      const file = input.files && input.files[0];
+      if (!file) return;
+      if (!['image/jpeg', 'image/png'].includes(file.type) || file.size > 2 * 1024 * 1024) {
+        alert('Please upload a JPG or PNG photo up to 2MB.');
+        input.value = '';
+        return;
+      }
+      if (selectedPhotoURL) URL.revokeObjectURL(selectedPhotoURL);
+      const img = document.getElementById('photo-preview-img');
+      cropPhotoToFrame(file, 0.8).then(u => { selectedPhotoURL = u; img.src = u; }).catch(() => { selectedPhotoURL = URL.createObjectURL(file); img.src = selectedPhotoURL; });
+      img.classList.remove('hidden');
+      document.getElementById('photo-placeholder').classList.add('hidden');
+    }
+
+    function cropPhotoToFrame(file, ratio) {
+      return new Promise((resolve, reject) => {
+        const srcUrl = URL.createObjectURL(file);
+        const im = new Image();
+        im.onload = () => {
+          let cw = im.width, ch = im.width / ratio;
+          if (ch > im.height) { ch = im.height; cw = im.height * ratio; }
+          const sx = (im.width - cw) / 2, sy = (im.height - ch) / 3;
+          const c = document.createElement('canvas');
+          c.width = 400; c.height = 500;
+          c.getContext('2d').drawImage(im, sx, sy, cw, ch, 0, 0, 400, 500);
+          URL.revokeObjectURL(srcUrl);
+          c.toBlob(b => (b ? resolve(URL.createObjectURL(b)) : reject(new Error('crop failed'))), 'image/png');
+        };
+        im.onerror = () => { URL.revokeObjectURL(srcUrl); reject(new Error('load failed')); };
+        im.src = srcUrl;
+      });
+    }
+
+    function validatePhoto() {
+      if (!selectedPhotoURL) {
+        alert('Please upload your passport-size photo to continue.');
+        return false;
+      }
+      return true;
+    }
+
+    function isMemberFormReady() {
+      return document.getElementById('member-registration-form').checkValidity() && !!selectedPhotoURL;
+    }
+
+    function randomDigits(n) {
+      let out = '';
+      for (let i = 0; i < n; i++) out += Math.floor(Math.random() * 10);
+      return out;
+    }
+
+    function syncIdCard() {
+      const name = document.getElementById('form-name').value.trim();
+      const dist = document.getElementById('form-district').value;
+      const constVal = document.getElementById('form-constituency').value;
+      document.getElementById('card-name').textContent = name.toUpperCase();
+      document.getElementById('card-constituency').textContent = constVal;
+      document.getElementById('card-district').textContent = dist;
+      document.getElementById('card-member-id').textContent = 'TN-' + dist.slice(0, 3).toUpperCase() + '-' + randomDigits(5);
+      document.getElementById('ref-number').textContent = 'TMMK-2026-TN-' + randomDigits(6);
+      const cardPhoto = document.getElementById('card-photo');
+      cardPhoto.src = selectedPhotoURL || '';
+      cardPhoto.classList.toggle('hidden', !selectedPhotoURL);
+    }
+
+    function selectedPhotoURLOrNull() { return selectedPhotoURL; }
+
+    function syncReviewData() {
+      const name = document.getElementById('form-name')?.value || '—';
+      const guardian = document.getElementById('form-guardian')?.value || '—';
+      const dobRaw = document.getElementById('form-dob')?.value || '';
+      const dob = dobRaw ? dobRaw.split('-').reverse().join('/') : '—';
+      const mobile = document.getElementById('form-mobile')?.value || '—';
+      const dist = document.getElementById('form-district')?.value || '—';
+      const constVal = document.getElementById('form-constituency')?.value || '—';
+      const pin = document.getElementById('form-pincode')?.value || '—';
+      const genderEl = document.querySelector('input[name="gender"]:checked');
+      const gender = genderEl ? genderEl.value : '—';
+
+      if (document.getElementById('rev-name')) document.getElementById('rev-name').innerText = name;
+      if (document.getElementById('rev-guardian')) document.getElementById('rev-guardian').innerText = guardian;
+      if (document.getElementById('rev-dob')) document.getElementById('rev-dob').innerText = dob;
+      if (document.getElementById('rev-gender')) document.getElementById('rev-gender').innerText = gender;
+      if (document.getElementById('rev-mobile')) document.getElementById('rev-mobile').innerText = mobile !== '—' ? '+91 ' + mobile : '—';
+      if (document.getElementById('rev-assembly')) document.getElementById('rev-assembly').innerText = (constVal !== '—' && dist !== '—') ? constVal + ' (' + dist + ')' : '—';
+      if (document.getElementById('rev-pincode')) document.getElementById('rev-pincode').innerText = pin;
+    }
+
+    function selectAmount(btn, val) {
+      donationAmount = val;
+      document.querySelectorAll('.amount-btn').forEach(b => {
+        b.classList.remove('bg-primary', 'text-on-primary', 'border-primary', 'shadow-sm');
+        b.classList.add('bg-surface-card', 'text-text-primary', 'border-border-subtle');
+      });
+      btn.classList.add('bg-primary', 'text-on-primary', 'border-primary', 'shadow-sm');
+      btn.classList.remove('bg-surface-card', 'text-text-primary', 'border-border-subtle');
+
+      const customInput = document.getElementById('custom-donation-input');
+      if (val === 'custom') {
+        customInput.classList.remove('hidden');
+        customInput.focus();
+      } else {
+        customInput.classList.add('hidden');
+      }
+    }
+
+    // Tamil Nadu's 38 districts. Each district starts with a matching assembly constituency;
+    // districts with several seats expose additional choices where commonly applicable.
+    const TN_DISTRICT_CONSTITUENCIES = {
+      'Ariyalur': ['Ariyalur'],
+      'Chengalpattu': ['Chengalpattu', 'Madurantakam', 'Tambaram'],
+      'Chennai': ['Harbour (துறைமுகம்)', 'Chepauk-Thiruvallikeni (சேப்பாக்கம்)', 'Royapuram (இராயபுரம்)', 'Thousand Lights (ஆயிரம் விளக்கு)', 'Dr. Radhakrishnan Nagar', 'Perambur', 'Kolathur', 'Villivakkam', 'Thiru-Vi-Ka-Nagar', 'Egmore', 'Anna Nagar', 'Virugampakkam', 'Saidapet', 'T. Nagar', 'Mylapore', 'Velachery', 'Sholinganallur'],
+      'Coimbatore': ['Coimbatore South (கோவை தெற்கு)', 'Coimbatore North (கோவை வடக்கு)', 'Singanallur (சிங்கநல்லூர்)', 'Kavundampalayam', 'Thondamuthur', 'Pollachi', 'Mettupalayam'],
+      'Cuddalore': ['Cuddalore', 'Panruti', 'Chidambaram'],
+      'Dharmapuri': ['Dharmapuri', 'Pappireddippatti', 'Palacode'],
+      'Dindigul': ['Dindigul', 'Athoor', 'Palani', 'Natham'],
+      'Erode': ['Erode East', 'Erode West', 'Gobichettipalayam', 'Bhavani'],
+      'Kallakurichi': ['Kallakurichi', 'Sankarapuram'],
+      'Madurai': ['Madurai Central (மதுரை மத்தி)', 'Madurai West (மதுரை மேற்கு)', 'Madurai East (மதுரை கிழக்கு)', 'Thirumangalam', 'Melur'],
+      'Kancheepuram': ['Kancheepuram', 'Uthiramerur'],
+      'Kanniyakumari': ['Nagercoil', 'Kanniyakumari', 'Colachel', 'Padmanabhapuram'],
+      'Karur': ['Karur', 'Krishnarayapuram'],
+      'Krishnagiri': ['Krishnagiri', 'Hosur', 'Bargur'],
+      'Mayiladuthurai': ['Mayiladuthurai', 'Sirkazhi'],
+      'Nagapattinam': ['Nagapattinam', 'Kilvelur', 'Vedaranyam'],
+      'Namakkal': ['Namakkal', 'Rasipuram', 'Tiruchengode'],
+      'Nilgiris': ['Udhagamandalam', 'Coonoor', 'Gudalur'],
+      'Perambalur': ['Perambalur', 'Kunnam'],
+      'Pudukkottai': ['Pudukkottai', 'Alangudi', 'Aranthangi'],
+      'Ramanathapuram': ['Ramanathapuram', 'Paramakudi', 'Tiruvadanai'],
+      'Ranipet': ['Ranipet', 'Arcot', 'Sholinghur'],
+      'Salem': ['Salem North (சேலம் வடக்கு)', 'Salem West (சேலம் மேற்கு)', 'Salem South', 'Omalur', 'Mettur', 'Attur'],
+      'Sivaganga': ['Sivaganga', 'Karaikudi', 'Manamadurai'],
+      'Tenkasi': ['Tenkasi', 'Kadayanallur', 'Sankarankovil'],
+      'Thanjavur': ['Thanjavur (தஞ்சாவூர்)', 'Kumbakonam (கும்பகோணம்)', 'Papanasam', 'Pattukkottai'],
+      'Theni': ['Bodinayakanur', 'Cumbum', 'Andipatti'],
+      'Thoothukudi': ['Thoothukkudi', 'Tiruchendur', 'Srivaikuntam', 'Kovilpatti'],
+      'Tiruchirappalli': ['Tiruchirappalli West (திருச்சி மேற்கு)', 'Tiruchirappalli East (திருச்சி கிழக்கு)', 'Srirangam', 'Manapparai'],
+      'Tirunelveli': ['Tirunelveli Town (திருநெல்வேலி நகரம்)', 'Palayamkottai (பாளையங்கோட்டை)', 'Ambasamudram', 'Nanguneri'],
+      'Tirupathur': ['Tirupattur', 'Vaniyambadi', 'Ambur'],
+      'Tiruppur': ['Tiruppur North', 'Tiruppur South', 'Avanashi', 'Dharapuram'],
+      'Tiruvallur': ['Tiruvallur', 'Poonamallee', 'Tiruttani', 'Avadi'],
+      'Tiruvannamalai': ['Tiruvannamalai', 'Arani', 'Kalasapakkam', 'Chengam'],
+      'Tiruvarur': ['Tiruvarur', 'Mannargudi', 'Thiruthuraipoondi'],
+      'Vellore': ['Vellore (வேலூர்)', 'Katpadi (காட்பாடி)', 'Anaikattu'],
+      'Viluppuram': ['Viluppuram', 'Vikravandi', 'Tindivanam', 'Gingee'],
+      'Virudhunagar': ['Virudhunagar', 'Sivakasi', 'Sattur', 'Aruppukkottai']
+    };
+
+    const TN_DISTRICTS = Object.keys(TN_DISTRICT_CONSTITUENCIES);
+
+    function populateDistricts() {
+      const districtSelect = document.getElementById('form-district');
+      if (!districtSelect || districtSelect.options.length > 1) return;
+      TN_DISTRICTS.forEach(name => {
+        const option = document.createElement('option');
+        option.value = name;
+        option.textContent = name;
+        districtSelect.appendChild(option);
+      });
+    }
+
+    function updateConstituencies() {
+      const districtSelect = document.getElementById('form-district');
+      const dist = districtSelect.value;
+      const cSelect = document.getElementById('form-constituency');
+      const choices = TN_DISTRICT_CONSTITUENCIES[dist] || [];
+      cSelect.replaceChildren();
+      if (!dist || !choices.length) {
+        cSelect.disabled = true;
+        const option = document.createElement('option');
+        option.value = '';
+        option.textContent = 'Select a district first';
+        option.disabled = true;
+        option.selected = true;
+        cSelect.appendChild(option);
+        return;
+      }
+      choices.forEach((item, index) => {
+        const option = document.createElement('option');
+        option.value = item;
+        option.textContent = item;
+        option.selected = index === 0;
+        cSelect.appendChild(option);
+      });
+      cSelect.disabled = false;
+      applyLanguage();
+    }
+
+    const districtSelect = document.getElementById('form-district');
+    if (districtSelect) {
+      populateDistricts();
+      districtSelect.addEventListener('change', updateConstituencies);
+    }
+
+    function siteBack() {
+      if (currentStep > 1) {
+        goToStep(currentStep - 1);
+        return;
+      }
+      if (window.history.length > 1) window.history.back();
+      else window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    // ====== YOUPI PAYMENT GATEWAY ======
+    // Receiving UPI ID for this organisation.
+    const RECEIVING_VPA = 'vinvizhi811@oksbi';
+    const YOUPI_CONFIG = {
+      merchantId: 'vinvizhi811@oksbi',
+      // Your server endpoint that creates a YOUPI checkout session using the
+      // merchant API key (kept on the server only). It must return { checkoutUrl }.
+      sessionUrl: 'https://tmmkcard-5qmxlc2a.manus.space/',
+      name: 'TMMK',
+      themeColor: '#7A0F25'
+    };
+    function youpiConfigured() {
+      return !YOUPI_CONFIG.merchantId.startsWith('PASTE_') && !YOUPI_CONFIG.sessionUrl.startsWith('PASTE_');
+    }
+    function currentPayAmount() {
+      const raw = applicationFlow === 'membership' ? '100' : (donationAmount === 'custom' ? document.getElementById('custom-donation-input').value.trim() : donationAmount);
+      return /^\d+(\.\d{1,2})?$/.test(raw) && Number(raw) > 0 ? Number(raw).toFixed(2) : '';
+    }
+    async function payWithYoupi() {
+      const amount = currentPayAmount();
+      if (!amount) { alert('Please enter a valid amount.'); return; }
+      // Fall back to the direct UPI link until YOUPI is configured.
+      if (!youpiConfigured() || !window.YoupiCheckout) { payWithGooglePay(); return; }
+
+      const orderId = 'TMMK' + Date.now();
+      const description = applicationFlow === 'membership' ? 'Membership payment' : 'Donation';
+      try {
+        const res = await fetch(YOUPI_CONFIG.sessionUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            merchantId: YOUPI_CONFIG.merchantId,
+            orderId, amount, currency: 'INR', description,
+            receivingVpa: RECEIVING_VPA, method: 'MANUAL_UPI'
+          })
+        });
+        const data = await res.json();
+        if (!res.ok || !data.checkoutUrl) throw new Error(data.error || 'Checkout could not be started');
+
+        YoupiCheckout.pay({
+          checkoutUrl: data.checkoutUrl,
+          orderId, order_id: orderId, amount, currency: 'INR',
+          name: YOUPI_CONFIG.name, description,
+          theme: { color: YOUPI_CONFIG.themeColor },
+          // Browser callbacks are UI only; the admin verifies the bank record.
+          onSuccess: (result) => {
+            // Pre-fill the UTR for convenience. Submission still requires review.
+            if (result && result.utr) {
+              document.getElementById('utr-input').value = String(result.utr).replace(/\D/g, '').slice(0, 12);
+            }
+          },
+          onFailed: () => alert('The payment was not completed. Please try again.'),
+          onExpired: () => alert('The payment session expired. Please start the payment again.')
+        });
+      } catch (err) {
+        // The session endpoint did not return a checkout. Use the direct UPI link instead.
+        console.warn('YOUPI checkout unavailable:', err);
+        payWithGooglePay();
+      }
+    }
+    function payWithGooglePay() {
+      // Fixed UPI payment link for the payment button.
+      const upiLink = 'upi://pay?pa=vinvizhi811@oksbi&am=1&cu=INR';
+      // Android: open the UPI app chooser via an intent link. Other platforms: direct upi:// link.
+      if (/Android/i.test(navigator.userAgent)) {
+        window.location.assign('intent://pay?pa=vinvizhi811@oksbi&am=1&cu=INR#Intent;scheme=upi;end');
+        return;
+      }
+      window.location.assign(upiLink);
+    }
+    function copyUPI() {
+      const vpa = document.getElementById('upi-vpa-text').innerText;
+      navigator.clipboard.writeText(vpa).then(() => {
+        const lbl = document.getElementById('copy-label');
+        lbl.innerText = 'Copied!'; applyLanguage();
+        setTimeout(() => { lbl.innerText = 'Copy'; applyLanguage(); }, 2000);
+      });
+    }
+
+    // ====== BACKEND (Google Apps Script) ======
+    const BACKEND_URL = 'https://script.google.com/macros/s/AKfycbxY_ZNfZkKC6QffC4YEkavG_DCDuLk-cEwTFqp1GEiv-TA8jM7AhuanZyfu2GwBfkSU/exec';
+    let applicationFlow = 'membership';   // set by the two buttons on step 1
+    let donationAmount = '250';           // updated by selectAmount()
+
+    // Shrink the photo to ~400px JPEG and return base64 (keeps the upload small)
+    function photoToBase64() {
+      return new Promise(resolve => {
+        const file = document.getElementById('form-photo').files[0];
+        if (!file) return resolve('');
+        const img = new Image();
+        const url = URL.createObjectURL(file);
+        img.onload = () => {
+          const max = 400, s = Math.min(1, max / Math.max(img.width, img.height));
+          const c = document.createElement('canvas');
+          c.width = Math.round(img.width * s); c.height = Math.round(img.height * s);
+          c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+          URL.revokeObjectURL(url);
+          resolve(c.toDataURL('image/jpeg', 0.8).split(',')[1]);
+        };
+        img.onerror = () => resolve('');
+        img.src = url;
+      });
+    }
+
+    async function submitApplication() {
+      const utr = document.getElementById('utr-input').value.trim();
+      if (!/^\d{12}$/.test(utr)) {
+        alert('Please enter the 12-digit UPI / UTR reference number.');
+        return;
+      }
+      if (BACKEND_URL.startsWith('PASTE_')) {
+        alert('Backend URL is not configured yet.');
+        return;
+      }
+      const btn = event && event.currentTarget;
+      if (btn) { btn.disabled = true; btn.style.opacity = '0.6'; }
+
+      syncIdCard();   // generates Member ID + Reference number
+      const v = id => (document.getElementById(id)?.value || '').trim();
+      const isMember = applicationFlow === 'membership';
+      const customAmt = v('custom-donation-input');
+
+      const payload = {
+        type: isMember ? 'membership' : 'donation',
+        ref: document.getElementById('ref-number').textContent.trim(),
+        memberId: isMember ? document.getElementById('card-member-id').textContent.trim() : '',
+        name: v('form-name'),
+        guardian: v('form-guardian'),
+        dob: v('form-dob'),
+        gender: (document.querySelector('input[name="gender"]:checked') || {}).value || '',
+        mobile: v('form-mobile'),
+        email: v('form-email'),
+        address: v('form-address'),
+        district: v('form-district'),
+        constituency: v('form-constituency'),
+        pincode: v('form-pincode'),
+        occupation: v('form-occupation'),
+        amount: isMember ? '100' : (donationAmount === 'custom' ? customAmt : donationAmount),
+        utr: utr,
+        photo: isMember ? await photoToBase64() : ''
+      };
+
+      try {
+        // text/plain avoids a CORS preflight, which Apps Script cannot answer
+        const res = await fetch(BACKEND_URL, { method: 'POST', body: JSON.stringify(payload) });
+        const out = await res.json();
+        if (!out.ok) throw new Error(out.error || 'Server rejected the submission');
+        paymentVerified = true;
+        goToStep(5);
+      } catch (err) {
+        alert('Could not submit your application: ' + err.message + '\nPlease try again.');
+      } finally {
+        if (btn) { btn.disabled = false; btn.style.opacity = ''; }
+      }
+    }
+
+    const TMMK_LOGO_SRC = 'data:image/png;base64,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';
+
+    function loadImage(src) {
+      return new Promise(resolve => {
+        if (!src) return resolve(null);
+        const img = new Image();
+        img.onload = () => resolve(img);
+        img.onerror = () => resolve(null);
+        img.src = src;
+      });
+    }
+
+    function renderMembershipCard() {
+      return new Promise((resolve, reject) => {
+        const W = 1011, H = 638;
+        const canvas = document.createElement('canvas');
+        canvas.width = W; canvas.height = H;
+        const ctx = canvas.getContext('2d');
+        const val = id => (document.getElementById(id)?.textContent || '').trim();
+        const RED = '#6E0F26', INK = '#FBEFF1', MUTED = '#D9B3BB', GOLD = '#E8B84A', LINE = '#8A3350';
+
+        function fit(text, maxW) {
+          if (ctx.measureText(text).width <= maxW) return text;
+          let t = text;
+          while (t.length > 1 && ctx.measureText(t + '…').width > maxW) t = t.slice(0, -1);
+          return t + '…';
+        }
+        function label(text, x, y) {
+          ctx.fillStyle = MUTED;
+          ctx.font = '600 16px "Inter", sans-serif';
+          ctx.fillText(text.toUpperCase(), x, y);
+        }
+        function paint(photo, logo) {
+          try {
+            ctx.fillStyle = '#2A0B15';
+            ctx.fillRect(0, 0, W, H);
+
+            // Header
+            ctx.fillStyle = RED;
+            ctx.fillRect(0, 0, W, 120);
+            ctx.fillStyle = GOLD;
+            ctx.fillRect(0, 120, W, 8);
+            if (logo) {
+              ctx.save();
+              ctx.fillStyle = '#FFFFFF';
+              ctx.beginPath(); ctx.arc(60, 60, 44, 0, Math.PI * 2); ctx.fill();
+              ctx.beginPath(); ctx.arc(60, 60, 40, 0, Math.PI * 2); ctx.closePath(); ctx.clip();
+              ctx.drawImage(logo, 20, 20, 80, 80);
+              ctx.restore();
+            }
+            const fitFont = (text, family, weight, size, maxW) => {
+              let s = size;
+              ctx.font = `${weight} ${s}px ${family}`;
+              while (s > 11 && ctx.measureText(text).width > maxW) {
+                s -= 1;
+                ctx.font = `${weight} ${s}px ${family}`;
+              }
+              return text;
+            };
+            const titleW = (W - 230) - 130 - 24;
+            const TA_TITLE = 'தமிழக முற்போக்கு மக்கள் கட்சி';
+            const EN_TITLE = 'Tamizhaga Murpokku Makkal Katchi';
+            ctx.fillStyle = '#ffffff';
+            fitFont(TA_TITLE, '"Noto Sans Tamil", "Noto Sans", sans-serif', 700, 34, titleW);
+            ctx.fillText(TA_TITLE, 130, 52);
+            fitFont(EN_TITLE, '"Noto Sans", sans-serif', 600, 24, titleW);
+            ctx.fillText(EN_TITLE, 130, 96);
+            const bx = W - 230, by = 40, bw = 190, bh = 40;
+            ctx.fillStyle = 'rgba(255,255,255,0.2)';
+            ctx.fillRect(bx, by, bw, bh);
+            ctx.fillStyle = '#ffffff';
+            ctx.font = '700 12px "Inter", sans-serif';
+            ctx.letterSpacing = '1px';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('MEMBERSHIP ID CARD', bx + bw / 2, by + bh / 2);
+            ctx.letterSpacing = '0px';
+            ctx.textAlign = 'left';
+            ctx.textBaseline = 'alphabetic';
+
+            // Photo
+            const px = 40, py = 168, pw = 200, ph = 250;
+            ctx.fillStyle = '#4A1628';
+            ctx.fillRect(px, py, pw, ph);
+            if (photo) {
+              const scale = Math.max(pw / photo.width, ph / photo.height);
+              const dw = photo.width * scale, dh = photo.height * scale;
+              ctx.drawImage(photo, px + (pw - dw) / 2, py + (ph - dh) / 2, dw, dh);
+            }
+            ctx.strokeStyle = LINE;
+            ctx.lineWidth = 2;
+            ctx.strokeRect(px, py, pw, ph);
+
+            // Member details
+            const x = 280, nameMax = W - x - 40;
+            label('Member name', x, 190);
+            ctx.fillStyle = INK;
+            ctx.font = '700 34px "Noto Sans", sans-serif';
+            ctx.fillText(fit(val('card-name') || '—', nameMax), x, 228);
+
+            label('Member ID', x, 290);
+            ctx.fillStyle = GOLD;
+            ctx.font = '700 26px "Courier New", monospace';
+            ctx.fillText(val('card-member-id') || '—', x, 320);
+
+            label('Reference number', 600, 290);
+            ctx.fillStyle = INK;
+            ctx.font = '600 20px "Courier New", monospace';
+            ctx.fillText(val('ref-number') || '—', 600, 320);
+
+            label('District', x, 370);
+            ctx.fillStyle = INK;
+            ctx.font = '600 22px "Inter", sans-serif';
+            ctx.fillText(fit(val('card-district') || '—', 300), x, 400);
+
+            label('Constituency', 600, 370);
+            ctx.fillStyle = INK;
+            ctx.font = '600 22px "Inter", sans-serif';
+            ctx.fillText(fit(val('card-constituency') || '—', W - 600 - 40), 600, 400);
+
+            label('Validity', x, 450);
+            ctx.fillStyle = GOLD;
+            ctx.font = '700 24px "Inter", sans-serif';
+            ctx.fillText('2026 - 2029', x, 480);
+
+            // Footer
+            ctx.fillStyle = '#1E0710';
+            ctx.fillRect(0, H - 56, W, 56);
+            ctx.fillStyle = GOLD;
+            ctx.font = '700 16px "Inter", sans-serif';
+            ctx.textAlign = 'right';
+            ctx.fillText('VERIFIED', W - 40, H - 22);
+            const verifiedW = ctx.measureText('VERIFIED').width;
+            ctx.textAlign = 'left';
+            ctx.fillStyle = MUTED;
+            const footTxt = 'NO 82/1 5TH STREET PATHBANABA NAGAR ADAYAR CHENNAI 600020   |   support@tmmk-party.org';
+            fitFont(footTxt, '"Inter", sans-serif', 500, 16, W - 40 - 40 - verifiedW - 24);
+            ctx.fillText(footTxt, 40, H - 22);
+
+            // Border
+            ctx.strokeStyle = GOLD;
+            ctx.lineWidth = 6;
+            ctx.strokeRect(3, 3, W - 6, H - 6);
+
+            canvas.toBlob(b => (b ? resolve(b) : reject(new Error('Could not create the card image.'))), 'image/png');
+          } catch (err) {
+            reject(err);
+          }
+        }
+
+        Promise.all([loadImage(TMMK_LOGO_SRC), loadImage(selectedPhotoURL)])
+          .then(([logoImg, photoImg]) => paint(photoImg, logoImg));
+      });
+    }
+
+    // ---------- Navigation (header, footer, banner links) ----------
+    function onReady(fn) {
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fn);
+      else fn();
+    }
+
+    function navigate(path) {
+      switch (path) {
+        case 'home':
+          goToStep(1);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          break;
+        case 'membership-registration': {
+          goToStep(1);
+          const target = document.querySelector('#step-panel-1 [onclick="goToStep(2)"]') || document.getElementById('step-panel-1');
+          target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          break;
+        }
+        case 'donation-portal': {
+          goToStep(1);
+          const target = document.querySelector('#step-panel-1 [onclick^="selectAmount"]') || document.getElementById('step-panel-1');
+          target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          break;
+        }
+        case 'membership-status-and-id': {
+          const ref = (document.getElementById('ref-number')?.textContent || '').trim();
+          if (ref.startsWith('TMMK')) goToStep(5);
+          else alert('Your membership status and ID card will appear here after you complete a registration.');
+          break;
+        }
+        case 'contact-and-helpline':
+          document.querySelector('footer').scrollIntoView({ behavior: 'smooth' });
+          break;
+        case 'membership-terms':
+          alert('For the full membership terms, please contact support@tmmk-party.org.');
+          break;
+        case 'privacy-policy':
+          alert('For the full privacy policy, please contact support@tmmk-party.org.');
+          break;
+      }
+    }
+
+    function wireNavigation() {
+      document.querySelectorAll('[data-path]').forEach(el => {
+        el.addEventListener('click', e => {
+          e.preventDefault();
+          navigate(el.dataset.path);
+        });
+      });
+      // Round avatar in the header opens the status / ID card section
+      const avatar = document.getElementById('header-avatar');
+      if (avatar) {
+        avatar.style.cursor = 'pointer';
+        avatar.addEventListener('click', () => navigate('membership-status-and-id'));
+      }
+    }
+    onReady(wireNavigation);
+
+    // ---------- Receipt (Print Receipt button) ----------
+    function renderReceipt() {
+      return new Promise((resolve, reject) => {
+        const W = 900, H = 1320;
+        const canvas = document.createElement('canvas');
+        canvas.width = W; canvas.height = H;
+        const ctx = canvas.getContext('2d');
+        const inp = id => (document.getElementById(id)?.value || '').trim();
+        const txt = id => (document.getElementById(id)?.textContent || '').trim();
+
+        ctx.fillStyle = '#2A0B15';
+        ctx.fillRect(0, 0, W, H);
+        ctx.fillStyle = '#6E0F26';
+        ctx.fillRect(0, 0, W, 140);
+        ctx.fillStyle = '#E8B84A';
+        ctx.fillRect(0, 140, W, 6);
+        ctx.fillStyle = '#FBEFF1';
+        ctx.font = '700 40px "Noto Sans", sans-serif';
+        ctx.fillText('Tamizhaga Murpokku Makkal Katchi', 50, 75);
+        ctx.font = '600 26px "Inter", sans-serif';
+        ctx.fillText('Membership Payment Receipt', 50, 115);
+
+        const rows = [
+          ['Member name', inp('form-name')],
+          ['Member ID', txt('card-member-id')],
+          ['Reference number', txt('ref-number')],
+          ['Mobile', inp('form-mobile') ? '+91 ' + inp('form-mobile') : ''],
+          ['District', inp('form-district')],
+          ['Constituency', inp('form-constituency')],
+          ['UPI / UTR reference', inp('utr-input')],
+          ['Amount paid', '₹100 (3 years)'],
+          ['Date', new Date().toLocaleDateString('en-IN')],
+          ['Status', 'Registration received'],
+        ];
+        let y = 220;
+        rows.forEach(([label, value]) => {
+          ctx.fillStyle = '#D9B3BB';
+          ctx.font = '600 22px "Inter", sans-serif';
+          ctx.fillText(label.toUpperCase(), 50, y);
+          ctx.fillStyle = '#FBEFF1';
+          ctx.font = '600 32px "Inter", sans-serif';
+          ctx.fillText(value || '—', 50, y + 40);
+          ctx.strokeStyle = '#6E2538';
+          ctx.lineWidth = 2;
+          ctx.beginPath();
+          ctx.moveTo(50, y + 62);
+          ctx.lineTo(W - 50, y + 62);
+          ctx.stroke();
+          y += 100;
+        });
+
+        ctx.fillStyle = '#D9B3BB';
+        ctx.font = '500 20px "Inter", sans-serif';
+        ctx.fillText('Toll-Free Helpline: 9444013530  |  support@tmmk-party.org', 50, H - 50);
+
+        try {
+          canvas.toBlob(b => (b ? resolve(b) : reject(new Error('Could not create the receipt.'))), 'image/png');
+        } catch (err) {
+          reject(err);
+        }
+      });
+    }
+
+    // Save a file: uses Claude's download prompt when running inside Claude,
+    // otherwise uses the normal browser download.
+    async function saveFile(blob, filename) {
+      const downloads = (window.claude && window.claude.use) ? await window.claude.use('downloads') : null;
+      if (downloads) {
+        await downloads.save({ filename: filename, data: blob });
+        return;
+      }
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1500);
+    }
+
+    async function printReceipt() {
+      const ref = (document.getElementById('ref-number')?.textContent || '').trim();
+      if (!ref.startsWith('TMMK')) {
+        alert('Your receipt will be available after you submit your registration.');
+        return;
+      }
+      try {
+        const blob = await renderReceipt();
+        await saveFile(blob, 'TMMK-Receipt-' + ref.replace(/[^A-Za-z0-9-]/g, '') + '.png');
+        alert('Receipt saved. Open the file and print it from your device.');
+      } catch (err) {
+        if (err && err.code === 'declined') return;
+        try {
+          window.print();
+        } catch (e) {
+          alert('Could not save or print the receipt. Please try again.');
+        }
+      }
+    }
+
+    async function triggerDownload() {
+      try {
+        const blob = await renderMembershipCard();
+        const memberId = (document.getElementById('card-member-id')?.textContent || 'member').replace(/[^A-Za-z0-9-]/g, '');
+        await saveFile(blob, 'TMMK-Membership-Card-' + memberId + '.png');
+      } catch (err) {
+        if (err && err.code === 'declined') return;
+        if (err && err.code === 'rate_limited') { alert('Please wait a moment and try again.'); return; }
+        alert('Could not download the card. Please try again.');
+      }
+    }
+  </script>
+</div></div></main><section class="w-full bg-gradient-to-r from-[#8B0000] via-[#c8102e] to-[#b22222] py-space-xl text-on-primary"><div class="max-w-6xl mx-auto px-gutter-mobile lg:px-gutter flex flex-col md:flex-row items-center justify-between gap-space-lg text-center md:text-left"><div class="flex flex-col gap-space-xs"><h2 class="font-headline-lg text-headline-lg tracking-tight text-on-primary">Be a Part of the Change</h2><p class="font-body-md text-body-md text-gold-tint/90 max-w-xl">Join us today and take the next step towards active participation.</p></div><a class="inline-flex items-center justify-center h-12 px-space-xl rounded-lg bg-surface-card text-primary font-label-lg text-label-lg hover:bg-gold-tint transition-colors shadow-md shrink-0 font-semibold" data-path="membership-registration" href="#">Become a Member</a></div></section><footer class="w-full bg-surface-card border-t border-border-subtle text-text-primary"><div class="max-w-6xl mx-auto px-gutter-mobile lg:px-gutter py-space-xl grid grid-cols-1 md:grid-cols-3 gap-space-xl"><div class="flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-3 h-3 rounded-full bg-primary"></div><span class="font-headline-sm text-headline-sm text-primary font-bold">Tamizhaga Murpokku Makkal Katchi</span></div><p class="font-body-sm text-body-sm text-text-muted leading-relaxed">Connecting people through membership, participation and a shared commitment to Tamil Nadu's progress.</p><div class="flex items-center gap-space-sm font-label-sm text-label-sm text-text-muted pt-space-xs"><span class="material-symbols-outlined text-primary text-[18px]">verified</span><span class="">Authorized Civic &amp; Party Portal</span></div></div><div class="flex flex-col gap-space-md"><span class="font-label-lg text-label-lg text-text-primary uppercase tracking-wider font-semibold">Quick Links</span><nav class="flex flex-col gap-space-sm" data-active-classes="text-primary font-semibold"><a aria-current="page" class="transition-colors text-primary font-semibold" data-path="home" href="#">Home</a><a class="font-body-sm text-body-sm text-text-muted hover:text-primary transition-colors" data-path="membership-registration" href="#">Become a Member</a><a class="font-body-sm text-body-sm text-text-muted hover:text-primary transition-colors" data-path="donation-portal" href="#">Make a Donation</a><a class="font-body-sm text-body-sm text-text-muted hover:text-primary transition-colors" data-path="membership-terms" href="#">Membership Terms</a><a class="font-body-sm text-body-sm text-text-muted hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="font-body-sm text-body-sm text-text-muted hover:text-primary transition-colors" data-path="contact-and-helpline" href="#">Contact Us</a></nav></div><div class="flex flex-col gap-space-md"><span class="font-label-lg text-label-lg text-text-primary uppercase tracking-wider font-semibold">Contact &amp; Support</span><div class="flex flex-col gap-space-sm font-body-sm text-body-sm text-text-muted"><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">call</span><div><span class="font-label-md text-label-md text-text-primary block font-semibold">Need Assistance?</span><span class="">Toll-Free Helpline: 9444013530</span></div></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px] shrink-0">mail</span><span class="">support@tmmk-party.org</span></div><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">location_on</span><span class="">NO 82/1 5TH STREET PATHBANABA NAGAR ADAYAR CHENNAI 600020</span></div></div></div></div><div class="border-t border-border-subtle py-space-md"><p class="text-center font-label-sm text-label-sm text-text-muted pb-space-sm">® ERP Developed by Julius Infotech Pvt. Ltd, THOOTHUKUDI, INDIA</p><div class="max-w-6xl mx-auto px-gutter-mobile lg:px-gutter flex flex-col sm:flex-row items-center justify-between gap-space-sm text-center sm:text-left"><p class="font-label-sm text-label-sm text-text-muted">© 2026 Tamizhaga Murpokku Makkal Katchi. All rights reserved.</p><div class="flex items-center gap-space-md font-label-sm text-label-sm text-text-muted"><a class="hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy</a><span class="">•</span><a class="hover:text-primary transition-colors" data-path="membership-terms" href="#">Terms</a><span class="">•</span><span class="inline-flex items-center gap-1 text-primary"><span class="material-symbols-outlined text-[14px]">shield</span>Security Verified 256-bit SSL</span></div></div></div></footer>
+
+
+
+
+
+
+
+
+<script id="gradient-yellow-text-script">
+(function () {
+  function wrapText(root) {
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    const textNodes = [];
+    while (walker.nextNode()) {
+      const node = walker.currentNode;
+      const parent = node.parentElement;
+      if (!node.nodeValue.trim() || !parent || parent.classList.contains('gradient-yellow-text') || /^(SCRIPT|STYLE|TEXTAREA|OPTION)$/i.test(parent.tagName)) continue;
+      textNodes.push(node);
+    }
+    textNodes.forEach(node => {
+      const span = document.createElement('span');
+      span.className = 'gradient-yellow-text';
+      node.parentNode.replaceChild(span, node);
+      span.appendChild(node);
+    });
+  }
+  function applyGradientText() {
+    wrapText(document.body);
+    const observer = new MutationObserver(records => records.forEach(record => record.addedNodes.forEach(node => {
+      if (node.nodeType === Node.TEXT_NODE) wrapText(node.parentNode);
+      else if (node.nodeType === Node.ELEMENT_NODE) wrapText(node);
+    })));
+    observer.observe(document.body, { childList: true, subtree: true });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', applyGradientText, { once: true });
+  else applyGradientText();
+})();
+</script></body></html>
